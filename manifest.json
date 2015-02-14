@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Add-Art",
+  "description": "Replacing ads with art.",
+  "author" : "Corey Tegeler",
+  "version": "0.1",
+  
+  "browser_action": {
+    "default_icon": "images/icon-64.png",
+    "default_popup": "popup.html",
+    "default_title": "Add art!"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}
