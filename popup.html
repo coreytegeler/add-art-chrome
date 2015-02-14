@@ -1,37 +1,34 @@
-<!doctype html>
-<!--
- This page is shown when the extension button is clicked, because the
- "browser_action" field in manifest.json contains the "default_popup" key with
- value "popup.html".
- -->
-<html>
-  <head>
-    <title>Getting Started Extension's Popup</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-      }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
-      }
-    </style>
-
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-    <script src="popup.js"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en' xml:lang='en' xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="settings.css" type="text/css" rel="stylesheet">
   </head>
-  <body>
-    <div id="status"></div>
-    <img id="image-result" hidden>
+  <body class="loading">
+    <header id="top">
+      <!-- <img src="logo.png"/> -->
+      <div title="Add your own art show" id="addSub"></div>
+    </header>
+    <main>
+      <ul id="shows">
+        <li class="show">
+          <div class="content">
+            <div class="thumb">
+              <img/>
+            </div>
+            <div class="info">
+              <header>
+                <h1 class="title"></h1>
+                <span class="date"></span>
+                <span class="link">
+                  <a></a>
+                </span>
+              </header>
+              <span class="description"></span>
+            </div>
+          </div>
+        </li>
+      </ul>
+  </main>
   </body>
 </html>
-
