@@ -8,15 +8,20 @@
   
   "browser_action": {
     "default_icon": "images/icon-64.png",
-    "default_popup": "popup.html",
+    "default_popup": "interface.html",
     "default_title": "Add art!"
   },
   "permissions": [
-    "activeTab",
-    "https://ajax.googleapis.com/"
+    "storage",
+    "http://*.add-art.org/"
   ],
   "background": {
-    "scripts": ["artAdder.js"],
-    "persistent": true
+    "scripts": [
+      "js/jquery-1.11.2.min.js",
+      "js/helpers.js",
+      "js/defaultSources.js",
+      "js/main.js"
+    ],
+    "persistent": false
   }
 }
