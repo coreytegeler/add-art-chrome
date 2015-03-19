@@ -11,10 +11,14 @@
     "default_popup": "interface.html",
     "default_title": "Add art!"
   },
+
   "permissions": [
     "storage",
-    "http://*.add-art.org/"
+    "http://*.add-art.org/",
+    "http://*/*",
+    "https://*/*"
   ],
+
   "background": {
     "scripts": [
       "js/jquery-1.11.2.min.js",

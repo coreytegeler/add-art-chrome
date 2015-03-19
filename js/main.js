@@ -14,20 +14,18 @@ function init(event) {
 	twoWeeksAgo = currentDate - twoWeeks;
 	twoWeeksFromNow = currentDate + twoWeeks;
 
-	console.log(reason);
-
-	if (reason == 'install') {
+	// if (reason == 'install') {
 		syncDefaultList();	
-	}
-	else if (reason == 'update') {
-		var defaultShowsAdded = chrome.storage.sync.get("defaultShowsAdded", function(object){
-		 	return object['defaultShowsAdded'];
-		});
+	// }
+	// else if (reason == 'update') {
+		// var defaultShowsAdded = chrome.storage.sync.get("defaultShowsAdded", function(object){
+		 	// return object['defaultShowsAdded'];
+		// });
 
 		// if (defaultShowsAdded instanceof Date && defaulShowsAdded > twoWeeksAgo) {
 
 		// }
-	}
+	// }
 	
 }
 
@@ -58,17 +56,15 @@ function requestFeeds() {
 	chrome.storage.sync.get("defaultFeeds", function(object){
 		defaultShows = object['defaultFeeds'];
 		var count = defaultShows.length;
-		for(var i = 0; i < count; i++) {
-			var feed = defaultShows[i].feed;
+		$.each(defaultShows, function(i, feed) {
+			console.log(i, feed);
+			feed = feed.feed;
 			$.get(feed, function(rss) {
 				var parsedData = parseRSS(rss);
 				defaultShowData.push(parsedData);
-			});
-			if(i == count-1) {
-				console.log(defaultShowData);
 				chrome.storage.sync.set({'defaultShowData': defaultShowData});
-			}
-		}
+			});
+		});
 	});
 }
 
@@ -98,6 +94,6 @@ function parseRSS(rss) {
 	return showObject
 }
 
-//Helpers
+
 
 
