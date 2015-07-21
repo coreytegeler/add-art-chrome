@@ -14,18 +14,18 @@ function init(event) {
 	twoWeeksAgo = currentDate - twoWeeks;
 	twoWeeksFromNow = currentDate + twoWeeks;
 
-	// if (reason == 'install') {
+	if (reason == 'install') {
 		syncDefaultList();	
-	// }
-	// else if (reason == 'update') {
-		// var defaultShowsAdded = chrome.storage.sync.get("defaultShowsAdded", function(object){
-		 	// return object['defaultShowsAdded'];
-		// });
+	}
+	else if (reason == 'update') {
+		var defaultShowsAdded = chrome.storage.sync.get("defaultShowsAdded", function(object){
+		 	return object['defaultShowsAdded'];
+		});
 
 		// if (defaultShowsAdded instanceof Date && defaulShowsAdded > twoWeeksAgo) {
 
 		// }
-	// }
+	}
 	
 }
 
