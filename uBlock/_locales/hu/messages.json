@@ -1,0 +1,530 @@
+{
+  "extName":{
+    "message":"uBlock",
+    "description":"extension name."
+  },
+  "extShortDesc":{
+    "message":"Végre egy hatékony reklám- és követésblokkoló böngészőkhöz, amely kíméletes a processzorral és a memóriával.",
+    "description":"this will be in the chrome web store: must be 132 characters or less"
+  },
+  "dashboardName":{
+    "message":"uBlock — Vezérlőpult",
+    "description":"English: uBlock — Dashboard"
+  },
+  "settingsPageName":{
+    "message":"Beállítások",
+    "description":"appears as tab name in dashboard"
+  },
+  "3pPageName":{
+    "message":"Külső szűrők",
+    "description":"appears as tab name in dashboard"
+  },
+  "1pPageName":{
+    "message":"Saját szűrők",
+    "description":"appears as tab name in dashboard"
+  },
+  "rulesPageName":{
+    "message":"Saját szabályok",
+    "description":"appears as tab name in dashboard"
+  },
+  "whitelistPageName":{
+    "message":"Kivételek",
+    "description":"appears as tab name in dashboard"
+  },
+  "statsPageName":{
+    "message":"uBlock — Hálózati lekérések naplója",
+    "description":"Title for the network request log window"
+  },
+  "aboutPageName":{
+    "message":"Névjegy",
+    "description":"appears as tab name in dashboard"
+  },
+  "popupPowerSwitchInfo":{
+    "message":"Klikk: uBlock tiltása\/engedélyezése ezen a webhelyen.\n\nCtrl+klikk: csak a jelenlegi oldal tiltása\/engedélyezése.",
+    "description":"English: Click: disable\/enable uBlock for this site.\n\nCtrl+click: disable uBlock only on this page."
+  },
+  "popupBlockedRequestPrompt":{
+    "message":"blokkolt lekérések",
+    "description":"English: requests blocked"
+  },
+  "popupBlockedOnThisPagePrompt":{
+    "message":"ezen a lapon",
+    "description":"English: on this page"
+  },
+  "popupBlockedStats":{
+    "message":"{{count}} vagy {{percent}}%",
+    "description":"Example: 15 or 13%"
+  },
+  "popupBlockedSinceInstallPrompt":{
+    "message":"telepítés óta",
+    "description":"English: since install"
+  },
+  "popupOr":{
+    "message":"vagy",
+    "description":"English: or"
+  },
+  "popupTipDashboard":{
+    "message":"Kattintson ide a vezérlőpult megnyitásához",
+    "description":"English: Click to open the dashboard"
+  },
+  "popupTipPicker":{
+    "message":"Elemválasztó mód aktiválása",
+    "description":"English: Enter element picker mode"
+  },
+  "popupTipLog":{
+    "message":"Naplózott lekérések megtekintése",
+    "description":"English: Go to request log"
+  },
+  "popupTipNoPopups":{
+    "message":"Nincs előugró ablak ezen a webhelyen",
+    "description":"English: No popups for this site"
+  },
+  "popupTipNoStrictBlocking":{
+    "message":"Nincs szigorú tiltás erre a webhelyre",
+    "description":"English: No strict blocking for this site"
+  },
+  "popupAnyRulePrompt":{
+    "message":"minden",
+    "description":""
+  },
+  "popupImageRulePrompt":{
+    "message":"képek",
+    "description":""
+  },
+  "popup3pAnyRulePrompt":{
+    "message":"külső féltől",
+    "description":""
+  },
+  "popupInlineScriptRulePrompt":{
+    "message":"inline scriptek",
+    "description":""
+  },
+  "popup1pScriptRulePrompt":{
+    "message":"1st-party scriptek",
+    "description":""
+  },
+  "popup3pScriptRulePrompt":{
+    "message":"3rd-party scriptek",
+    "description":""
+  },
+  "popup3pFrameRulePrompt":{
+    "message":"3rd-party frame-ek",
+    "description":""
+  },
+  "popupHitDomainCountPrompt":{
+    "message":"domain csatlakozik",
+    "description":"appears in popup"
+  },
+  "popupHitDomainCount":{
+    "message":"{{count}}, összesen: {{total}}",
+    "description":"appears in popup"
+  },
+  "pickerCreate":{
+    "message":"Létrehoz",
+    "description":"English: Create"
+  },
+  "pickerPick":{
+    "message":"Választ",
+    "description":"English: Pick"
+  },
+  "pickerQuit":{
+    "message":"Kilép",
+    "description":"English: Quit"
+  },
+  "pickerNetFilters":{
+    "message":"Hálózati szűrők",
+    "description":"English: Net filters"
+  },
+  "pickerCosmeticFilters":{
+    "message":"Kozmetikai szűrők",
+    "description":"English: Cosmetic filters"
+  },
+  "pickerCosmeticFiltersHint":{
+    "message":"Klikk, Ctrl-klikk",
+    "description":"English: Click, Ctrl-click"
+  },
+  "pickerContextMenuEntry":{
+    "message":"Elem blokkolása",
+    "description":"English: Block element"
+  },
+  "settingsCollapseBlockedPrompt":{
+    "message":"Blokkolt elemek helyőrzőinek elrejtése",
+    "description":"English: Hide placeholders of blocked elements"
+  },
+  "settingsIconBadgePrompt":{
+    "message":"Jelenjen meg a blokkolt lekérések száma az ikonon",
+    "description":"English: Show the number of blocked requests on the icon"
+  },
+  "settingsContextMenuPrompt":{
+    "message":"Környezeti menü alkalmazása, ahol lehetséges",
+    "description":"English: Make use of context menu where appropriate"
+  },
+  "settingsAdvancedUserPrompt":{
+    "message":"Haladó felhasználó vagyok (<a href='https:\/\/github.com\/chrisaljoudi\/uBlock\/wiki\/Advanced-Mode'>További tudnivalók<\/a>)",
+    "description":"English: "
+  },
+  "settingsExperimentalPrompt":{
+    "message":"Kísérleti funkciók engedélyezése (<a href='https:\/\/github.com\/chrisaljoudi\/uBlock\/wiki\/Experimental-features'>Információk<\/a>)",
+    "description":"English: Enable experimental features"
+  },
+  "settingsStorageUsed":{
+    "message":"Tárolóhely használat: {{value}} byte",
+    "description":"English: Storage used: {{}} bytes"
+  },
+  "settingsLastRestorePrompt":{
+    "message":"Utolsó visszaállítás:",
+    "description":"English: Last restore:"
+  },
+  "settingsLastBackupPrompt":{
+    "message":"Utolsó biztonsági mentés:",
+    "description":"English: Last backup:"
+  },
+  "3pListsOfBlockedHostsPrompt":{
+    "message":"{{netFilterCount}} hálózati szűrők ＋ {{cosmeticFilterCount}} kozmetikai szűrők:",
+    "description":"English: {{netFilterCount}} network filters ＋ {{cosmeticFilterCount}} cosmetic filters from:"
+  },
+  "3pListsOfBlockedHostsPerListStats":{
+    "message":"{{used}} használatban a listában lévő {{total}} szűrő közül",
+    "description":"English: {{used}} used out of {{total}}"
+  },
+  "3pAutoUpdatePrompt1":{
+    "message":"Szűrőlisták automatikus frissítése.",
+    "description":"English: Auto-update filter lists."
+  },
+  "3pUpdateNow":{
+    "message":"Frissítés most",
+    "description":"English: Update now"
+  },
+  "3pPurgeAll":{
+    "message":"Gyorsítótárak ürítése",
+    "description":"English: Purge all caches"
+  },
+  "3pParseAllABPHideFiltersPrompt1":{
+    "message":"Értelmezze és alkalmazza a kozmetikai szűrőket.",
+    "description":"English: Parse and enforce Adblock+ element hiding filters."
+  },
+  "3pParseAllABPHideFiltersInfo":{
+    "message":"<p>Ez a beállítás engedélyezi az <a href=\"https:\/\/adblockplus.org\/en\/faq_internal#elemhide\">Adblock Plus-típusú &ldquo;elemelrejtő&rdquo; szűrőket<\/a>. Ezek kizárólag kozmetikai célokat szolgálnak; elrejtik egy webhely azon elemeit, amelyek vizuálisan zavaróak, de a hálózati lekérések alapján nem szűrhetők ki.<\/p><p>A beállítás engedélyezése megnöveli a <i>uBlock<\/i> memóriahasználatát.<\/p>",
+    "description":"English: see English messages.json"
+  },
+  "3pListsOfBlockedHostsHeader":{
+    "message":"Blokkolt hostokat tartalmazó listák",
+    "description":"English: Lists of blocked hosts"
+  },
+  "3pApplyChanges":{
+    "message":"Módosítások alkalmazása",
+    "description":"English: Apply changes"
+  },
+  "3pGroupAds":{
+    "message":"Hirdetések",
+    "description":"English: Ads"
+  },
+  "3pGroupPrivacy":{
+    "message":"Adatvédelem",
+    "description":"English: Privacy"
+  },
+  "3pGroupMalware":{
+    "message":"Malware domainek",
+    "description":"English: Malware domains"
+  },
+  "3pGroupSocial":{
+    "message":"Közösségi",
+    "description":"English: Social"
+  },
+  "3pGroupMultipurpose":{
+    "message":"Többcélú",
+    "description":"English: Multipurpose"
+  },
+  "3pGroupRegions":{
+    "message":"Régiók, nyelvek",
+    "description":"English: Regions, languages"
+  },
+  "3pGroupCustom":{
+    "message":"Saját",
+    "description":"English: Custom"
+  },
+  "3pExternalListsHint":{
+    "message":"Soronként egy URL. A &lsquo;!&rsquo; kezdetű sorok figyelmen kívül maradnak. A szabálytalan URL-ek szintén figyelmen kívül maradnak, hibajelzés nélkül.",
+    "description":"English: One URL per line. Lines prefixed with &lsquo;!&rsquo; will be ignored. Invalid URLs will be silently ignored."
+  },
+  "3pExternalListsApply":{
+    "message":"Alkalmaz",
+    "description":"English: Parse"
+  },
+  "3pExternalListPurge":{
+    "message":"gyorsítótár ürítése",
+    "description":"English: purge cache"
+  },
+  "3pExternalListNew":{
+    "message":"új verzió érhető el",
+    "description":"English: new version available"
+  },
+  "3pExternalListObsolete":{
+    "message":"elavult",
+    "description":"English: outdated"
+  },
+  "3pLastUpdate":{
+    "message":"Utolsó frissítés: {{ago}}",
+    "description":"English: Last update: {{ago}}, where 'ago' will be replaced with something like '2 days ago'"
+  },
+  "1pFormatHint":{
+    "message":"Soronként egy szűrő. A szűrő lehet egy hostnév, vagy egy Adblock Plus kompatibilis szűrő.\nA &lsquo;!&rsquo; kezdetű sorok figyelmen kívül maradnak.",
+    "description":"English: One filter per line. A filter can be a plain hostname, or an Adblock Plus-compatible filter. Lines prefixed with &lsquo;!&rsquo; will be ignored."
+  },
+  "1pImport":{
+    "message":"Importál és hozzáad",
+    "description":"English: Import and append"
+  },
+  "1pExport":{
+    "message":"Exportál",
+    "description":"English: Export"
+  },
+  "1pExportFilename":{
+    "message":"ublock-statikus-szabalyaim_{{datetime}}.txt",
+    "description":"English: my-ublock-static-filters_{{datetime}}.txt"
+  },
+  "1pApplyChanges":{
+    "message":"Módosítások alkalmazása",
+    "description":"English: Apply changes"
+  },
+  "rulesPermanentHeader":{
+    "message":"Állandó szabályok",
+    "description":"header"
+  },
+  "rulesTemporaryHeader":{
+    "message":"Átmeneti szabályok",
+    "description":"header"
+  },
+  "rulesRevert":{
+    "message":"Visszaállítás",
+    "description":"This will remove all temporary rules"
+  },
+  "rulesCommit":{
+    "message":"Alkalmaz",
+    "description":"This will persist temporary rules"
+  },
+  "rulesEdit":{
+    "message":"Szerkesztés",
+    "description":"Will enable manual-edit mode (textarea)"
+  },
+  "rulesEditSave":{
+    "message":"Mentés",
+    "description":"Will save manually-edited content and exit manual-edit mode"
+  },
+  "rulesEditDiscard":{
+    "message":"Elvetés",
+    "description":"Will discard manually-edited content and exit manual-edit mode"
+  },
+  "rulesImport":{
+    "message":"Importálás fájlból…",
+    "description":""
+  },
+  "rulesExport":{
+    "message":"Exportálás fájlba",
+    "description":""
+  },
+  "rulesDefaultFileName":{
+    "message":"ublock-dinamikus-szabalyaim_{{datetime}}.txt",
+    "description":"default file name to use"
+  },
+  "rulesHint":{
+    "message":"Saját szűrőszabályok listája.",
+    "description":"English: List of your dynamic filtering rules."
+  },
+  "rulesFormatHint":{
+    "message":"Szabály szintaxis: <code>forrás cél típus művelet<\/code> (<a href='https:\/\/github.com\/chrisaljoudi\/uBlock\/wiki\/Dynamic-filtering:-rule-syntax'>Teljes dokumentáció<\/a>).",
+    "description":"English: dynamic rule syntax and full documentation."
+  },
+  "whitelistPrompt":{
+    "message":"Az álábbi listában felsorolt hostokon a kiegészítő nem fog működni. Soronként egy bejegyzés. Érvénytelen hostnevek figyelmen kívül maradnak.",
+    "description":"English: Your list of host names for which uBlock will be disabled. One host name per line. Invalid host names will be silently ignored."
+  },
+  "whitelistImport":{
+    "message":"Importál és hozzáad",
+    "description":"English: Import and append"
+  },
+  "whitelistExport":{
+    "message":"Exportál",
+    "description":"English: Export"
+  },
+  "whitelistExportFilename":{
+    "message":"ublock-kiveteleim_{{datetime}}.txt",
+    "description":"English: my-ublock-whitelist_{{datetime}}.txt"
+  },
+  "whitelistApply":{
+    "message":"Módosítások alkalmazása",
+    "description":"English: Apply changes"
+  },
+  "logNetRequestsPrompt":{
+    "message":"Naplózza a hálózati lekéréseket",
+    "description":"English: Enable the logging of network requests"
+  },
+  "logNetRequestsHelp":{
+    "message":"A hálózati lekérések részletei tekinthetőek meg ennek az opciónak a bekapcsolásával.\nA hálózati lekérések naplózása megnöveli a memóriahasználatot. Alapértelmezetten ki van kapcsolva, mivel a legtöbb felhasználónak nem lesz szüksége erre a funkcióra.",
+    "description":"English: see _locales\/en\/messages.log"
+  },
+  "logBlockedRequestsHeader":{
+    "message":"Blokkolt lekérések",
+    "description":"English: Blocked requests"
+  },
+  "logAllowedRequestsHeader":{
+    "message":"Engedélyezett lekérések",
+    "description":"English: Allowed requests"
+  },
+  "logRequestsHeaderType":{
+    "message":"Típus",
+    "description":"English: Type"
+  },
+  "logRequestsHeaderDomain":{
+    "message":"Domain",
+    "description":"English: Domain"
+  },
+  "logRequestsHeaderURL":{
+    "message":"URL",
+    "description":"English: URL"
+  },
+  "logRequestsHeaderFilter":{
+    "message":"Szűrő",
+    "description":"English: Filter"
+  },
+  "logBlockedRequestsEmpty":{
+    "message":"Nincs blokkolt lekérés naplózva ezen a lapon",
+    "description":"English: No blocked requests logged for this page"
+  },
+  "logAllowedRequestsEmpty":{
+    "message":"Nincs engedélyezett lekérés naplózva ezen a lapon",
+    "description":"English: No non-blocked requests logged for this page"
+  },
+  "logBehindTheScene":{
+    "message":"Hálózati lekérések a háttérben",
+    "description":"Pretty name for behind-the-scene network requests"
+  },
+  "logFilterPrompt":{
+    "message":"naplóbejegyzések szűrése",
+    "description":"English: filter log entries"
+  },
+  "logMaxEntriesTip":{
+    "message":"Naplóbejegyzések maximális száma",
+    "description":"Tooltip informaing that the input field is to set the maximum number of entries in the log"
+  },
+  "aboutChangelog":{
+    "message":"Változások listája",
+    "description":"English: Change log"
+  },
+  "aboutWiki":{
+    "message":"Wiki",
+    "description":"English: project' wiki on Github"
+  },
+  "aboutCode":{
+    "message":"Forráskód (GPLv3)",
+    "description":"English: Source code (GPLv3)"
+  },
+  "aboutContributors":{
+    "message":"Közreműködők",
+    "description":"English: Contributors"
+  },
+  "aboutBackupDataButton":{
+    "message":"Biztonsági mentés fájlba...",
+    "description":"English: Backup to file"
+  },
+  "aboutBackupFilename":{
+    "message":"ublock-mentesem_{{datetime}}.txt",
+    "description":"English: my-ublock-backup_{{datetime}}.txt"
+  },
+  "aboutRestoreDataButton":{
+    "message":"Biztonsági mentés visszaállítása fájlból...",
+    "description":"English: Restore from file..."
+  },
+  "aboutResetDataButton":{
+    "message":"Alapértelmezett beállítások visszaállítása...",
+    "description":"English: Reset to default settings..."
+  },
+  "aboutRestoreDataConfirm":{
+    "message":"A jelenlegi beállítások felülíródnak a mentett adatokkal (mentési idő: {{time}}), utána a uBlock újraindul.\n\nFelülírja a jelenlegi beállításokat a biztonsági mentéssel?",
+    "description":"Message asking user to confirm restore"
+  },
+  "aboutRestoreDataError":{
+    "message":"Nem olvasható vagy érvénytelen adat",
+    "description":"Message to display when an error occurred during restore"
+  },
+  "aboutResetDataConfirm":{
+    "message":"Az összes beállítás törlődik, utána a uBlock újraindul.\n\nÁllítsa vissza a gyári beállításokat?",
+    "description":"Message asking user to confirm reset"
+  },
+  "errorCantConnectTo":{
+    "message":"Csatlakozás sikertelen a következő címhez: {{url}}",
+    "description":"English: Network error: unable to connect to {{url}}"
+  },
+  "subscriberConfirm":{
+    "message":"uBlock: Hozzáadja a következő URL-t a saját szűrő listákhoz?\n\nNév: \"{{title}}\"\nURL: \"{{url}}\"",
+    "description":"English: The message seen by the user to confirm subscription to a ABP filter list"
+  },
+  "elapsedOneMinuteAgo":{
+    "message":"egy perce",
+    "description":"English: a minute ago"
+  },
+  "elapsedManyMinutesAgo":{
+    "message":"{{value}} perce",
+    "description":"English: {{value}} minutes ago"
+  },
+  "elapsedOneHourAgo":{
+    "message":"egy órája",
+    "description":"English: an hour ago"
+  },
+  "elapsedManyHoursAgo":{
+    "message":"{{value}} órája",
+    "description":"English: {{value}} hours ago"
+  },
+  "elapsedOneDayAgo":{
+    "message":"egy napja",
+    "description":"English: a day ago"
+  },
+  "elapsedManyDaysAgo":{
+    "message":"{{value}} napja",
+    "description":"English: {{value}} days ago"
+  },
+  "showDashboardButton":{
+    "message":"Vezérlőpult megnyitása",
+    "description":"Firefox\/Fennec-specific: Show Dashboard"
+  },
+  "showNetworkLogButton":{
+    "message":"Naplózott hálozati lekérések megtekintése",
+    "description":"Firefox\/Fennec-specific: Show Network Request Log"
+  },
+  "fennecMenuItemBlockingOff":{
+    "message":"kikapcsolva",
+    "description":"Firefox-specific: appears as 'uBlock (off)'"
+  },
+  "docblockedPrompt1":{
+    "message":"uBlock nem engedte a következő lap betöltését:",
+    "description":"English: uBlock has prevented the following page from loading:"
+  },
+  "docblockedPrompt2":{
+    "message":"A következő szűrő miatt",
+    "description":"English: Because of the following filter"
+  },
+  "docblockedBack":{
+    "message":"Vissza",
+    "description":"English: Go back"
+  },
+  "docblockedClose":{
+    "message":"Ablak bezárása",
+    "description":"English: Close this window"
+  },
+  "docblockedProceed":{
+    "message":"Kapcsolja ki a szigorú tiltást a(z) {{hostname}} részére",
+    "description":"English: Disable strict blocking for {{hostname}} ..."
+  },
+  "docblockedDisableTemporary":{
+    "message":"Ideiglenesen",
+    "description":"English: Temporarily"
+  },
+  "docblockedDisablePermanent":{
+    "message":"Véglegesen",
+    "description":"English: Permanently"
+  },
+  "dummy":{
+    "message":"Ez a bejegyzés utolsó kell hogy legyen",
+    "description":"so we dont need to deal with comma for last entry"
+  }
+}

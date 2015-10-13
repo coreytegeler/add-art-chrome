@@ -1,0 +1,530 @@
+{
+  "extName":{
+    "message":"uBlock",
+    "description":"extension name."
+  },
+  "extShortDesc":{
+    "message":"وأخيراً, مانع اعلانات كفوء. خفيف على المعالج و الذاكرة.",
+    "description":"this will be in the chrome web store: must be 132 characters or less"
+  },
+  "dashboardName":{
+    "message":"µBlock — قوائم إعداد المعلومات",
+    "description":"English: uBlock — Dashboard"
+  },
+  "settingsPageName":{
+    "message":"الإعدادات",
+    "description":"appears as tab name in dashboard"
+  },
+  "3pPageName":{
+    "message":"فلاتر خارجيه",
+    "description":"appears as tab name in dashboard"
+  },
+  "1pPageName":{
+    "message":"الفلاتر الخاصة بي",
+    "description":"appears as tab name in dashboard"
+  },
+  "rulesPageName":{
+    "message":"القواعد الخاصة بي",
+    "description":"appears as tab name in dashboard"
+  },
+  "whitelistPageName":{
+    "message":"القائمة البيضاء",
+    "description":"appears as tab name in dashboard"
+  },
+  "statsPageName":{
+    "message":"\"µBlock\" — سجل الإتصال بالشبكة",
+    "description":"Title for the network request log window"
+  },
+  "aboutPageName":{
+    "message":"معلومات عني",
+    "description":"appears as tab name in dashboard"
+  },
+  "popupPowerSwitchInfo":{
+    "message":"اضغط: لتعطيل\/تشغيل ميكروبلوك لهذا الموقع.\n\nCtrl+click لتعطيل ميكروبلوك لهذه الصفحة فقط.",
+    "description":"English: Click: disable\/enable uBlock for this site.\n\nCtrl+click: disable uBlock only on this page."
+  },
+  "popupBlockedRequestPrompt":{
+    "message":"تم منع الطلبات",
+    "description":"English: requests blocked"
+  },
+  "popupBlockedOnThisPagePrompt":{
+    "message":"على الصفحه",
+    "description":"English: on this page"
+  },
+  "popupBlockedStats":{
+    "message":"{{count}} أو {{percent}}%",
+    "description":"Example: 15 or 13%"
+  },
+  "popupBlockedSinceInstallPrompt":{
+    "message":"منذ بداية التنصيب",
+    "description":"English: since install"
+  },
+  "popupOr":{
+    "message":"او",
+    "description":"English: or"
+  },
+  "popupTipDashboard":{
+    "message":"اضغط لفتح اللوحه",
+    "description":"English: Click to open the dashboard"
+  },
+  "popupTipPicker":{
+    "message":"دخول وضع اختيار اليدوي",
+    "description":"English: Enter element picker mode"
+  },
+  "popupTipLog":{
+    "message":"الذهاب الى سجل الطلبات",
+    "description":"English: Go to request log"
+  },
+  "popupTipNoPopups":{
+    "message":"لا نوافذ منبثقة لهذا الموقع",
+    "description":"English: No popups for this site"
+  },
+  "popupTipNoStrictBlocking":{
+    "message":"لا حجب صارم لهذا الموقع",
+    "description":"English: No strict blocking for this site"
+  },
+  "popupAnyRulePrompt":{
+    "message":"كل",
+    "description":""
+  },
+  "popupImageRulePrompt":{
+    "message":"صور",
+    "description":""
+  },
+  "popup3pAnyRulePrompt":{
+    "message":"جهة خارجية",
+    "description":""
+  },
+  "popupInlineScriptRulePrompt":{
+    "message":"نصوص برمجة بين السطور",
+    "description":""
+  },
+  "popup1pScriptRulePrompt":{
+    "message":"سكربتات من الطرف الاول",
+    "description":""
+  },
+  "popup3pScriptRulePrompt":{
+    "message":"سكربتات من طرف خارجي",
+    "description":""
+  },
+  "popup3pFrameRulePrompt":{
+    "message":"إطارات من طرف خارجي",
+    "description":""
+  },
+  "popupHitDomainCountPrompt":{
+    "message":"النطاقات متصلة",
+    "description":"appears in popup"
+  },
+  "popupHitDomainCount":{
+    "message":"{{count}} من {{total}}",
+    "description":"appears in popup"
+  },
+  "pickerCreate":{
+    "message":"إنشاء",
+    "description":"English: Create"
+  },
+  "pickerPick":{
+    "message":"اختار",
+    "description":"English: Pick"
+  },
+  "pickerQuit":{
+    "message":"خروج",
+    "description":"English: Quit"
+  },
+  "pickerNetFilters":{
+    "message":"فلاتر النت",
+    "description":"English: Net filters"
+  },
+  "pickerCosmeticFilters":{
+    "message":"فلاتر تجميليه",
+    "description":"English: Cosmetic filters"
+  },
+  "pickerCosmeticFiltersHint":{
+    "message":"إضغط، إضغط مع Ctrl",
+    "description":"English: Click, Ctrl-click"
+  },
+  "pickerContextMenuEntry":{
+    "message":"أحجب العنصر",
+    "description":"English: Block element"
+  },
+  "settingsCollapseBlockedPrompt":{
+    "message":"اخفاء مكان العناصر المحجوبه",
+    "description":"English: Hide placeholders of blocked elements"
+  },
+  "settingsIconBadgePrompt":{
+    "message":"عرض عدد طلبات المحضوره على الايقونه",
+    "description":"English: Show the number of blocked requests on the icon"
+  },
+  "settingsContextMenuPrompt":{
+    "message":"إستخدم لائحة السياق في المكان المناسب",
+    "description":"English: Make use of context menu where appropriate"
+  },
+  "settingsAdvancedUserPrompt":{
+    "message":"إظهار الإعدادات المتقدمة (<a href='https:\/\/github.com\/chrisaljoudi\/uBlock\/wiki\/Advanced-Mode'>يجب القراءة<\/a>)",
+    "description":"English: "
+  },
+  "settingsExperimentalPrompt":{
+    "message":"تفعيل الخصائص التجريبية (<a href='https:\/\/github.com\/chrisaljoudi\/uBlock\/wiki\/Experimental-features'>حول<\/a>)",
+    "description":"English: Enable experimental features"
+  },
+  "settingsStorageUsed":{
+    "message":"الذاكرة المستخدمة: {{value}} بايت",
+    "description":"English: Storage used: {{}} bytes"
+  },
+  "settingsLastRestorePrompt":{
+    "message":"آخر إسترجاع:",
+    "description":"English: Last restore:"
+  },
+  "settingsLastBackupPrompt":{
+    "message":"آخر تخزين:",
+    "description":"English: Last backup:"
+  },
+  "3pListsOfBlockedHostsPrompt":{
+    "message":"{{netFilterCount}}  من فلاتر الشبكه ＋ {{cosmeticFilterCount}} فلاتر تجميليه:",
+    "description":"English: {{netFilterCount}} network filters ＋ {{cosmeticFilterCount}} cosmetic filters from:"
+  },
+  "3pListsOfBlockedHostsPerListStats":{
+    "message":"{{used}} تم استعماله من {{total}}",
+    "description":"English: {{used}} used out of {{total}}"
+  },
+  "3pAutoUpdatePrompt1":{
+    "message":"تحديث تلقائي للستات  الفلاتر",
+    "description":"English: Auto-update filter lists."
+  },
+  "3pUpdateNow":{
+    "message":"حدث الان",
+    "description":"English: Update now"
+  },
+  "3pPurgeAll":{
+    "message":"نظف جميع المخابئ",
+    "description":"English: Purge all caches"
+  },
+  "3pParseAllABPHideFiltersPrompt1":{
+    "message":"تحليل وتطبيق فلاتر التجميليه",
+    "description":"English: Parse and enforce Adblock+ element hiding filters."
+  },
+  "3pParseAllABPHideFiltersInfo":{
+    "message":"هذا الخيار يفعل تحليل وتطبيق فلاتر <a href=\"https:\/\/adblockplus.org\/en\/faq_internal#elemhide\">Adblock Plus-compatible &ldquo;element hiding&rdquo; filters<\/a> هذي الفلاتر مخصصه للتجميل الصفحه. هذي الفلاتر تخفي بعض صناديق او اعلانات المزعجه التي لا يمنعها محرك الفلاتر تفعيل هذي الخاصيه سوف يجعل الاضافه تستعمل الذاكره اكثر",
+    "description":"English: see English messages.json"
+  },
+  "3pListsOfBlockedHostsHeader":{
+    "message":"لستة مواقع المحضوره",
+    "description":"English: Lists of blocked hosts"
+  },
+  "3pApplyChanges":{
+    "message":"حفظ التغيرات",
+    "description":"English: Apply changes"
+  },
+  "3pGroupAds":{
+    "message":"اعلانات",
+    "description":"English: Ads"
+  },
+  "3pGroupPrivacy":{
+    "message":"خصوصيه",
+    "description":"English: Privacy"
+  },
+  "3pGroupMalware":{
+    "message":"مواقع مصابه او تحتوي على فايروسات",
+    "description":"English: Malware domains"
+  },
+  "3pGroupSocial":{
+    "message":"مواقع الاجتماعيه",
+    "description":"English: Social"
+  },
+  "3pGroupMultipurpose":{
+    "message":"متعددة الأغراض",
+    "description":"English: Multipurpose"
+  },
+  "3pGroupRegions":{
+    "message":"المناطق واللغات",
+    "description":"English: Regions, languages"
+  },
+  "3pGroupCustom":{
+    "message":"مخصصه",
+    "description":"English: Custom"
+  },
+  "3pExternalListsHint":{
+    "message":"رابط واحد كل سطر. روابط التي تحتوي على &lsquo;!&rsquo; سوف يتم تجاهلها . الروابط الغير صحيحه سوف ايضاً تجاهلها .",
+    "description":"English: One URL per line. Lines prefixed with &lsquo;!&rsquo; will be ignored. Invalid URLs will be silently ignored."
+  },
+  "3pExternalListsApply":{
+    "message":"تحليل",
+    "description":"English: Parse"
+  },
+  "3pExternalListPurge":{
+    "message":"مسح الكاش ",
+    "description":"English: purge cache"
+  },
+  "3pExternalListNew":{
+    "message":"يوجد اصدار جديد",
+    "description":"English: new version available"
+  },
+  "3pExternalListObsolete":{
+    "message":"قد يكون قديم ولا يعمل ",
+    "description":"English: outdated"
+  },
+  "3pLastUpdate":{
+    "message":"آخر تحديث: {{ago}}",
+    "description":"English: Last update: {{ago}}, where 'ago' will be replaced with something like '2 days ago'"
+  },
+  "1pFormatHint":{
+    "message":"كل سطر يمكن ان يتحمل على فلتر واحد. يمكن ان يكون الفلتر رابط موقع او فلتر متعارف مع نظام AdBlock Plus. روابط التي تحتوي على &lsquo;!&rsquo;  سوف يتم تجاهلها.",
+    "description":"English: One filter per line. A filter can be a plain hostname, or an Adblock Plus-compatible filter. Lines prefixed with &lsquo;!&rsquo; will be ignored."
+  },
+  "1pImport":{
+    "message":"استيراد",
+    "description":"English: Import and append"
+  },
+  "1pExport":{
+    "message":"تصدير",
+    "description":"English: Export"
+  },
+  "1pExportFilename":{
+    "message":"my-ublock-static-filters_{{datetime}}.txt",
+    "description":"English: my-ublock-static-filters_{{datetime}}.txt"
+  },
+  "1pApplyChanges":{
+    "message":"حفظ التغيرات",
+    "description":"English: Apply changes"
+  },
+  "rulesPermanentHeader":{
+    "message":"قواعد دائمة",
+    "description":"header"
+  },
+  "rulesTemporaryHeader":{
+    "message":"قواعد مؤقتة",
+    "description":"header"
+  },
+  "rulesRevert":{
+    "message":"إلغاء",
+    "description":"This will remove all temporary rules"
+  },
+  "rulesCommit":{
+    "message":"إضافة",
+    "description":"This will persist temporary rules"
+  },
+  "rulesEdit":{
+    "message":"تعديل",
+    "description":"Will enable manual-edit mode (textarea)"
+  },
+  "rulesEditSave":{
+    "message":"حفظ",
+    "description":"Will save manually-edited content and exit manual-edit mode"
+  },
+  "rulesEditDiscard":{
+    "message":"إلغاء",
+    "description":"Will discard manually-edited content and exit manual-edit mode"
+  },
+  "rulesImport":{
+    "message":"الاستيراد من ملف...",
+    "description":""
+  },
+  "rulesExport":{
+    "message":"تصدير إلى ملف",
+    "description":""
+  },
+  "rulesDefaultFileName":{
+    "message":"my-ublock-dynamic-rules_{{datetime}}.txt",
+    "description":"default file name to use"
+  },
+  "rulesHint":{
+    "message":"قائمة بقواعد الفلترة الديناميكية الخاصة بك.",
+    "description":"English: List of your dynamic filtering rules."
+  },
+  "rulesFormatHint":{
+    "message":"Rule syntax: <code>source destination type action<\/code> (<a href='https:\/\/github.com\/chrisaljoudi\/uBlock\/wiki\/Dynamic-filtering:-rule-syntax'>full documentation<\/a>).",
+    "description":"English: dynamic rule syntax and full documentation."
+  },
+  "whitelistPrompt":{
+    "message":"لستتك الخاصه فيك التي سوف يتم منعها من قبل الاداة. رابط واحد كل سطر, الروابط الغير صحيحه سوف يتم تجاهلها.",
+    "description":"English: Your list of host names for which uBlock will be disabled. One host name per line. Invalid host names will be silently ignored."
+  },
+  "whitelistImport":{
+    "message":"استيراد",
+    "description":"English: Import and append"
+  },
+  "whitelistExport":{
+    "message":"تصدير",
+    "description":"English: Export"
+  },
+  "whitelistExportFilename":{
+    "message":"my-ublock-whitelist_{{datetime}}.txt",
+    "description":"English: my-ublock-whitelist_{{datetime}}.txt"
+  },
+  "whitelistApply":{
+    "message":"حفظ التغيرات",
+    "description":"English: Apply changes"
+  },
+  "logNetRequestsPrompt":{
+    "message":"تفعيل تسجيل الطلبات المحظوره",
+    "description":"English: Enable the logging of network requests"
+  },
+  "logNetRequestsHelp":{
+    "message":"بإمكانك رؤية تفاصيل الطلبات التي تم منعها اذا تم اختيار تفعيل هذا الخيار. ولكن عند تفعيل هذي الاخاصيه سوف تستعمل من الذاكره قوه اكثر",
+    "description":"English: see _locales\/en\/messages.log"
+  },
+  "logBlockedRequestsHeader":{
+    "message":"الطلبات المحظوره",
+    "description":"English: Blocked requests"
+  },
+  "logAllowedRequestsHeader":{
+    "message":"طلبات المسموحه",
+    "description":"English: Allowed requests"
+  },
+  "logRequestsHeaderType":{
+    "message":"النوع",
+    "description":"English: Type"
+  },
+  "logRequestsHeaderDomain":{
+    "message":"الموقع",
+    "description":"English: Domain"
+  },
+  "logRequestsHeaderURL":{
+    "message":"رابط الموقع",
+    "description":"English: URL"
+  },
+  "logRequestsHeaderFilter":{
+    "message":"فلتر",
+    "description":"English: Filter"
+  },
+  "logBlockedRequestsEmpty":{
+    "message":"لا يوجد اي طلب ممنوع في هذي الصفحه.",
+    "description":"English: No blocked requests logged for this page"
+  },
+  "logAllowedRequestsEmpty":{
+    "message":"لا يوجد اي طلب غير ممنوع في هذي الصفحه.",
+    "description":"English: No non-blocked requests logged for this page"
+  },
+  "logBehindTheScene":{
+    "message":"خلف الكواليس",
+    "description":"Pretty name for behind-the-scene network requests"
+  },
+  "logFilterPrompt":{
+    "message":"فلتر سجل الإدخالات",
+    "description":"English: filter log entries"
+  },
+  "logMaxEntriesTip":{
+    "message":"العدد الأقصى للإدخالات في السجلات",
+    "description":"Tooltip informaing that the input field is to set the maximum number of entries in the log"
+  },
+  "aboutChangelog":{
+    "message":"سجل التغيير",
+    "description":"English: Change log"
+  },
+  "aboutWiki":{
+    "message":"الويكي (Wiki)",
+    "description":"English: project' wiki on Github"
+  },
+  "aboutCode":{
+    "message":"اكواد البرنامج (GPLv3)",
+    "description":"English: Source code (GPLv3)"
+  },
+  "aboutContributors":{
+    "message":"المساهمين",
+    "description":"English: Contributors"
+  },
+  "aboutBackupDataButton":{
+    "message":"النسخ الإحتياطي لملف",
+    "description":"English: Backup to file"
+  },
+  "aboutBackupFilename":{
+    "message":"إحتياط-ublock-الخاص-بي_{{datetime}}.txt",
+    "description":"English: my-ublock-backup_{{datetime}}.txt"
+  },
+  "aboutRestoreDataButton":{
+    "message":"إسترجع من الملف...",
+    "description":"English: Restore from file..."
+  },
+  "aboutResetDataButton":{
+    "message":"إعادة الضبط للوضع الافتراضي...",
+    "description":"English: Reset to default settings..."
+  },
+  "aboutRestoreDataConfirm":{
+    "message":"كل إعداداتك سوف يتم كتابتها  بإستعمال البيانات التي تم نسخها إحتياطيا على {{time}}، و سيعيد ميكروبلوك التشغيل.\n\nأعد كتابة كل الإعدادات الموجود بإستخدام البيانات التي تم نسخها إحتياطيا؟",
+    "description":"Message asking user to confirm restore"
+  },
+  "aboutRestoreDataError":{
+    "message":"تعذر قراءة البيانات أو إنها غير صالحة",
+    "description":"Message to display when an error occurred during restore"
+  },
+  "aboutResetDataConfirm":{
+    "message":"كل إعداداتك سيتم إلغائها، و سيتم إعادة تشغيل \"µBlock\".\n\n\nإعادة ضبط \"µBlock\" على الإعدادات الأصلية؟",
+    "description":"Message asking user to confirm reset"
+  },
+  "errorCantConnectTo":{
+    "message":"ليس بالإمكان الإتصال بـ {{url}}",
+    "description":"English: Network error: unable to connect to {{url}}"
+  },
+  "subscriberConfirm":{
+    "message":"µBlock : أضف الرابط التالي لقائمة الفلترة الخاصة بك؟\n\nعنوان : \"{{title}}\"\nرابط : {{url}}",
+    "description":"English: The message seen by the user to confirm subscription to a ABP filter list"
+  },
+  "elapsedOneMinuteAgo":{
+    "message":"منذ دقيقة",
+    "description":"English: a minute ago"
+  },
+  "elapsedManyMinutesAgo":{
+    "message":"منذ {{value}} دقيقة",
+    "description":"English: {{value}} minutes ago"
+  },
+  "elapsedOneHourAgo":{
+    "message":"منذ ساعة",
+    "description":"English: an hour ago"
+  },
+  "elapsedManyHoursAgo":{
+    "message":"منذ {{value}} ساعات",
+    "description":"English: {{value}} hours ago"
+  },
+  "elapsedOneDayAgo":{
+    "message":"قبل يوم واحد",
+    "description":"English: a day ago"
+  },
+  "elapsedManyDaysAgo":{
+    "message":"منذ {{value}} أيام",
+    "description":"English: {{value}} days ago"
+  },
+  "showDashboardButton":{
+    "message":"اعرض لوحة التحكم",
+    "description":"Firefox\/Fennec-specific: Show Dashboard"
+  },
+  "showNetworkLogButton":{
+    "message":"اعرض سجل طلبات الإتصال بالشبكة",
+    "description":"Firefox\/Fennec-specific: Show Network Request Log"
+  },
+  "fennecMenuItemBlockingOff":{
+    "message":"مطفئ",
+    "description":"Firefox-specific: appears as 'uBlock (off)'"
+  },
+  "docblockedPrompt1":{
+    "message":"uBlock منع الصفحة التالية من التحميل:",
+    "description":"English: uBlock has prevented the following page from loading:"
+  },
+  "docblockedPrompt2":{
+    "message":"بسبب الفلتر التالي",
+    "description":"English: Because of the following filter"
+  },
+  "docblockedBack":{
+    "message":"العودة للخلف",
+    "description":"English: Go back"
+  },
+  "docblockedClose":{
+    "message":"أغلق هذه النافذة",
+    "description":"English: Close this window"
+  },
+  "docblockedProceed":{
+    "message":"تعطيل الحجب الصارم على {{hostname}}",
+    "description":"English: Disable strict blocking for {{hostname}} ..."
+  },
+  "docblockedDisableTemporary":{
+    "message":"مؤقتا",
+    "description":"English: Temporarily"
+  },
+  "docblockedDisablePermanent":{
+    "message":"بشكل دائم",
+    "description":"English: Permanently"
+  },
+  "dummy":{
+    "message":"يجب أن يكون هذا الإدخال آخر واحد",
+    "description":"so we dont need to deal with comma for last entry"
+  }
+}

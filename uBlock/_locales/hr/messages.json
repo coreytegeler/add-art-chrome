@@ -1,0 +1,530 @@
+{
+  "extName":{
+    "message":"uBlock",
+    "description":"extension name."
+  },
+  "extShortDesc":{
+    "message":"Konačno, efikasan blokator. Lak na CPU i memoriji.",
+    "description":"this will be in the chrome web store: must be 132 characters or less"
+  },
+  "dashboardName":{
+    "message":"uBlock — Nadzorna ploča",
+    "description":"English: uBlock — Dashboard"
+  },
+  "settingsPageName":{
+    "message":"Postavke",
+    "description":"appears as tab name in dashboard"
+  },
+  "3pPageName":{
+    "message":"Filteri treće strane",
+    "description":"appears as tab name in dashboard"
+  },
+  "1pPageName":{
+    "message":"Moji filteri",
+    "description":"appears as tab name in dashboard"
+  },
+  "rulesPageName":{
+    "message":"Moja pravila",
+    "description":"appears as tab name in dashboard"
+  },
+  "whitelistPageName":{
+    "message":"Popis dopuštenih",
+    "description":"appears as tab name in dashboard"
+  },
+  "statsPageName":{
+    "message":"uBlock — Zapisnik mrežnih zahtjeva",
+    "description":"Title for the network request log window"
+  },
+  "aboutPageName":{
+    "message":"O programu",
+    "description":"appears as tab name in dashboard"
+  },
+  "popupPowerSwitchInfo":{
+    "message":"Klik: trajno onemogućiti\/omogućiti uBlock za ovaj sajt.\n\nCtrl+klik: onemogućiti µBlock samo za ovu stranicu.",
+    "description":"English: Click: disable\/enable uBlock for this site.\n\nCtrl+click: disable uBlock only on this page."
+  },
+  "popupBlockedRequestPrompt":{
+    "message":"zahtjeva blokirano",
+    "description":"English: requests blocked"
+  },
+  "popupBlockedOnThisPagePrompt":{
+    "message":"na ovoj stranici",
+    "description":"English: on this page"
+  },
+  "popupBlockedStats":{
+    "message":"{{count}} ili {{percent}}%",
+    "description":"Example: 15 or 13%"
+  },
+  "popupBlockedSinceInstallPrompt":{
+    "message":"od instalacije",
+    "description":"English: since install"
+  },
+  "popupOr":{
+    "message":"ili",
+    "description":"English: or"
+  },
+  "popupTipDashboard":{
+    "message":"Kliknite za otvaranje upravljačke ploče",
+    "description":"English: Click to open the dashboard"
+  },
+  "popupTipPicker":{
+    "message":"Pokrenite odabir elementa",
+    "description":"English: Enter element picker mode"
+  },
+  "popupTipLog":{
+    "message":"Odlazak na zapisnik zahtjeva",
+    "description":"English: Go to request log"
+  },
+  "popupTipNoPopups":{
+    "message":"Isključi skočne prozore na ovoj stranici",
+    "description":"English: No popups for this site"
+  },
+  "popupTipNoStrictBlocking":{
+    "message":"Isključi strogo blokiranje na ovoj stranici",
+    "description":"English: No strict blocking for this site"
+  },
+  "popupAnyRulePrompt":{
+    "message":"sve",
+    "description":""
+  },
+  "popupImageRulePrompt":{
+    "message":"slike",
+    "description":""
+  },
+  "popup3pAnyRulePrompt":{
+    "message":"treće strane",
+    "description":""
+  },
+  "popupInlineScriptRulePrompt":{
+    "message":"skripte u liniji",
+    "description":""
+  },
+  "popup1pScriptRulePrompt":{
+    "message":"Skripte prve strane",
+    "description":""
+  },
+  "popup3pScriptRulePrompt":{
+    "message":"Skripte trećih strana",
+    "description":""
+  },
+  "popup3pFrameRulePrompt":{
+    "message":"Okviri trećih strana",
+    "description":""
+  },
+  "popupHitDomainCountPrompt":{
+    "message":"domena povezan",
+    "description":"appears in popup"
+  },
+  "popupHitDomainCount":{
+    "message":"{{count}} od {{total}}",
+    "description":"appears in popup"
+  },
+  "pickerCreate":{
+    "message":"Stvaranje",
+    "description":"English: Create"
+  },
+  "pickerPick":{
+    "message":"Odabir",
+    "description":"English: Pick"
+  },
+  "pickerQuit":{
+    "message":"Izlaz",
+    "description":"English: Quit"
+  },
+  "pickerNetFilters":{
+    "message":"Mrežni filteri",
+    "description":"English: Net filters"
+  },
+  "pickerCosmeticFilters":{
+    "message":"Estetski filteri",
+    "description":"English: Cosmetic filters"
+  },
+  "pickerCosmeticFiltersHint":{
+    "message":"Klik, Ctrl-klik",
+    "description":"English: Click, Ctrl-click"
+  },
+  "pickerContextMenuEntry":{
+    "message":"Blokiraj element",
+    "description":"English: Block element"
+  },
+  "settingsCollapseBlockedPrompt":{
+    "message":"Sakrij rezervirana mjesta blokiranih elemenata",
+    "description":"English: Hide placeholders of blocked elements"
+  },
+  "settingsIconBadgePrompt":{
+    "message":"Pokaži broj blokiranih zahtjeva na ikoni",
+    "description":"English: Show the number of blocked requests on the icon"
+  },
+  "settingsContextMenuPrompt":{
+    "message":"Koristite kontekstni izbornik gdje je prikladno",
+    "description":"English: Make use of context menu where appropriate"
+  },
+  "settingsAdvancedUserPrompt":{
+    "message":"Ja sam napredni korisnik (<a href='https:\/\/github.com\/chrisaljoudi\/uBlock\/wiki\/Advanced-Mode'>Obavezna literatura<\/a>)",
+    "description":"English: "
+  },
+  "settingsExperimentalPrompt":{
+    "message":"Omogućiti eksperimentalne mogućnosti  (<a href='https:\/\/github.com\/chrisaljoudi\/uBlock\/wiki\/Experimental-features'>O mogućnostima<\/a>)",
+    "description":"English: Enable experimental features"
+  },
+  "settingsStorageUsed":{
+    "message":"Korišteno prostora: {{value}} bajtova",
+    "description":"English: Storage used: {{}} bytes"
+  },
+  "settingsLastRestorePrompt":{
+    "message":"Posljednji povratak na prijašnje:",
+    "description":"English: Last restore:"
+  },
+  "settingsLastBackupPrompt":{
+    "message":"Posljednja sigurnosna kopija:",
+    "description":"English: Last backup:"
+  },
+  "3pListsOfBlockedHostsPrompt":{
+    "message":"{{netFilterCount}} mrežni\/ih filter\/a ＋ {{cosmeticFilterCount}} estetski\/ih filter\/a iz:",
+    "description":"English: {{netFilterCount}} network filters ＋ {{cosmeticFilterCount}} cosmetic filters from:"
+  },
+  "3pListsOfBlockedHostsPerListStats":{
+    "message":"{{used}} korišteno od {{total}}",
+    "description":"English: {{used}} used out of {{total}}"
+  },
+  "3pAutoUpdatePrompt1":{
+    "message":"Automatsko ažuriranje popisa filtera.",
+    "description":"English: Auto-update filter lists."
+  },
+  "3pUpdateNow":{
+    "message":"Ažuriraj odmah",
+    "description":"English: Update now"
+  },
+  "3pPurgeAll":{
+    "message":"Očistiti sve cache-ove",
+    "description":"English: Purge all caches"
+  },
+  "3pParseAllABPHideFiltersPrompt1":{
+    "message":"Raščlaniti i primijeniti estetske filtre.",
+    "description":"English: Parse and enforce Adblock+ element hiding filters."
+  },
+  "3pParseAllABPHideFiltersInfo":{
+    "message":"<p>Ova opcija omogućava raščlambu i provođenje <a href=\"https:\/\/adblockplus.org\/en\/faq_internal#elemhide\">Adblock Plus-kompatibilnih filtera sa &ldquo;elementima za skrivanje&rdquo; <\/a>. Ovi filteri su uglavnom estetski, oni služe za skrivanje elemenata na web-stranici koja se smatra da je vizualna smetnja, a koja ne može biti blokirana od strane mrežnih zahtjeva temeljenih na filtriranju.<\/p><p>Omogućavanje ove značajke povećava <i>uBlock<\/i>memorijski otisak.<\/p>",
+    "description":"English: see English messages.json"
+  },
+  "3pListsOfBlockedHostsHeader":{
+    "message":"Popis blokiranih hosts",
+    "description":"English: Lists of blocked hosts"
+  },
+  "3pApplyChanges":{
+    "message":"Primijeni promjene",
+    "description":"English: Apply changes"
+  },
+  "3pGroupAds":{
+    "message":"Reklame",
+    "description":"English: Ads"
+  },
+  "3pGroupPrivacy":{
+    "message":"Privatnost",
+    "description":"English: Privacy"
+  },
+  "3pGroupMalware":{
+    "message":"Zloćudne domene",
+    "description":"English: Malware domains"
+  },
+  "3pGroupSocial":{
+    "message":"Socijalno",
+    "description":"English: Social"
+  },
+  "3pGroupMultipurpose":{
+    "message":"Višenamjensko",
+    "description":"English: Multipurpose"
+  },
+  "3pGroupRegions":{
+    "message":"Regije, jezici",
+    "description":"English: Regions, languages"
+  },
+  "3pGroupCustom":{
+    "message":"Prilagođeno",
+    "description":"English: Custom"
+  },
+  "3pExternalListsHint":{
+    "message":"Jedan URL po retku. Linije sa prefiksom &lsquo;!&rsquo; zanemarit će se. Nevaljani URL-ovi će biti tiho ignorirani.",
+    "description":"English: One URL per line. Lines prefixed with &lsquo;!&rsquo; will be ignored. Invalid URLs will be silently ignored."
+  },
+  "3pExternalListsApply":{
+    "message":"Primijeni",
+    "description":"English: Parse"
+  },
+  "3pExternalListPurge":{
+    "message":"čišćenje predmemorije",
+    "description":"English: purge cache"
+  },
+  "3pExternalListNew":{
+    "message":"dostupna nova verzija",
+    "description":"English: new version available"
+  },
+  "3pExternalListObsolete":{
+    "message":"zastarjelo",
+    "description":"English: outdated"
+  },
+  "3pLastUpdate":{
+    "message":"Posljednje ažuriranje: {{ago}}",
+    "description":"English: Last update: {{ago}}, where 'ago' will be replaced with something like '2 days ago'"
+  },
+  "1pFormatHint":{
+    "message":"Jedan filtar po retku. Filtar može biti običan hostname ili filter kompatibilan sa Adblock Plus-om. Linije sa prefiksom &lsquo;!&rsquo;  zanemarit će se.",
+    "description":"English: One filter per line. A filter can be a plain hostname, or an Adblock Plus-compatible filter. Lines prefixed with &lsquo;!&rsquo; will be ignored."
+  },
+  "1pImport":{
+    "message":"Uvesti i dodati",
+    "description":"English: Import and append"
+  },
+  "1pExport":{
+    "message":"Izvoz",
+    "description":"English: Export"
+  },
+  "1pExportFilename":{
+    "message":"moji-ublock-staticni-filteri_{{datetime}}.txt",
+    "description":"English: my-ublock-static-filters_{{datetime}}.txt"
+  },
+  "1pApplyChanges":{
+    "message":"Primijeni promjene",
+    "description":"English: Apply changes"
+  },
+  "rulesPermanentHeader":{
+    "message":"Trajna pravila",
+    "description":"header"
+  },
+  "rulesTemporaryHeader":{
+    "message":"Privremena pravila",
+    "description":"header"
+  },
+  "rulesRevert":{
+    "message":"Vratiti",
+    "description":"This will remove all temporary rules"
+  },
+  "rulesCommit":{
+    "message":"Izvršiti",
+    "description":"This will persist temporary rules"
+  },
+  "rulesEdit":{
+    "message":"Uredi",
+    "description":"Will enable manual-edit mode (textarea)"
+  },
+  "rulesEditSave":{
+    "message":"Spremi",
+    "description":"Will save manually-edited content and exit manual-edit mode"
+  },
+  "rulesEditDiscard":{
+    "message":"Odbaci",
+    "description":"Will discard manually-edited content and exit manual-edit mode"
+  },
+  "rulesImport":{
+    "message":"Uvoz iz datoteke...",
+    "description":""
+  },
+  "rulesExport":{
+    "message":"Izvoz u datoteku...",
+    "description":""
+  },
+  "rulesDefaultFileName":{
+    "message":"moja-ublock-dinamicna-pravila_{{datetime}}.txt",
+    "description":"default file name to use"
+  },
+  "rulesHint":{
+    "message":"Popis dinamičkih pravila filtriranja.",
+    "description":"English: List of your dynamic filtering rules."
+  },
+  "rulesFormatHint":{
+    "message":"Pravila sintakse: <code>akcija tipa izvornog odredišta<\/code> (<a href='https:\/\/github.com\/chrisaljoudi\/uBlock\/wiki\/Dynamic-filtering:-rule-syntax'>sva dokumentacija<\/a>).",
+    "description":"English: dynamic rule syntax and full documentation."
+  },
+  "whitelistPrompt":{
+    "message":"Popis host naziva za koje će uBlock biti onemogućen. Jedan zapis po retku. Nevaljani host nazivi će tiho biti ignorirani.",
+    "description":"English: Your list of host names for which uBlock will be disabled. One host name per line. Invalid host names will be silently ignored."
+  },
+  "whitelistImport":{
+    "message":"Uvesti i dodati",
+    "description":"English: Import and append"
+  },
+  "whitelistExport":{
+    "message":"Izvoz",
+    "description":"English: Export"
+  },
+  "whitelistExportFilename":{
+    "message":"moja-ublock-lista_dopustenog_{{datetime}}.txt",
+    "description":"English: my-ublock-whitelist_{{datetime}}.txt"
+  },
+  "whitelistApply":{
+    "message":"Primijeni promjene",
+    "description":"English: Apply changes"
+  },
+  "logNetRequestsPrompt":{
+    "message":"Omogućiti zapisivanje mrežnih zahtjeva",
+    "description":"English: Enable the logging of network requests"
+  },
+  "logNetRequestsHelp":{
+    "message":"Detalje mrežnih zahtjeva možete provjeriti aktiviranjem ove mogućnosti. Bilježenje mrežnih zahtjeva povećava memorijski otisak uBlock-a. Budući da mnogi korisnici nikada neće koristiti ovu značajku, to je onemogućeno u zadanoj postavci.",
+    "description":"English: see _locales\/en\/messages.log"
+  },
+  "logBlockedRequestsHeader":{
+    "message":"Blokirani zahtjevi",
+    "description":"English: Blocked requests"
+  },
+  "logAllowedRequestsHeader":{
+    "message":"Dopušteni zahtjevi",
+    "description":"English: Allowed requests"
+  },
+  "logRequestsHeaderType":{
+    "message":"Tip",
+    "description":"English: Type"
+  },
+  "logRequestsHeaderDomain":{
+    "message":"Domena",
+    "description":"English: Domain"
+  },
+  "logRequestsHeaderURL":{
+    "message":"URL",
+    "description":"English: URL"
+  },
+  "logRequestsHeaderFilter":{
+    "message":"Filter",
+    "description":"English: Filter"
+  },
+  "logBlockedRequestsEmpty":{
+    "message":"Nema blokiranih zahtjeva zapisanih za ovu stranicu",
+    "description":"English: No blocked requests logged for this page"
+  },
+  "logAllowedRequestsEmpty":{
+    "message":"Nema neblokiranih zahtjeva zapisanih za ovu stranicu",
+    "description":"English: No non-blocked requests logged for this page"
+  },
+  "logBehindTheScene":{
+    "message":"Iza scene",
+    "description":"Pretty name for behind-the-scene network requests"
+  },
+  "logFilterPrompt":{
+    "message":"filtrirajte zabilješke",
+    "description":"English: filter log entries"
+  },
+  "logMaxEntriesTip":{
+    "message":"Makismalan broj zabilješki",
+    "description":"Tooltip informaing that the input field is to set the maximum number of entries in the log"
+  },
+  "aboutChangelog":{
+    "message":"Popis promjena",
+    "description":"English: Change log"
+  },
+  "aboutWiki":{
+    "message":"Wiki",
+    "description":"English: project' wiki on Github"
+  },
+  "aboutCode":{
+    "message":"Izvorni kôd (GPLv3)",
+    "description":"English: Source code (GPLv3)"
+  },
+  "aboutContributors":{
+    "message":"Suradnici",
+    "description":"English: Contributors"
+  },
+  "aboutBackupDataButton":{
+    "message":"Sigurnosno kopiranje u datoteku...",
+    "description":"English: Backup to file"
+  },
+  "aboutBackupFilename":{
+    "message":"moja-ublock-sig_kopija_{{datetime}}.txt",
+    "description":"English: my-ublock-backup_{{datetime}}.txt"
+  },
+  "aboutRestoreDataButton":{
+    "message":"Vraćanje iz datoteke...",
+    "description":"English: Restore from file..."
+  },
+  "aboutResetDataButton":{
+    "message":"Vraćanje izvornih zadanih postavki...",
+    "description":"English: Reset to default settings..."
+  },
+  "aboutRestoreDataConfirm":{
+    "message":"Sve vaše postavke prebrisat će se sa postavkama spremljenim {{time}}, i uBlock će se ponovno pokrenuti. \n\nPrepisati sve postojeće postavke pomoću sigurnosne kopije postavki?",
+    "description":"Message asking user to confirm restore"
+  },
+  "aboutRestoreDataError":{
+    "message":"Podatke nije moguće učitati ili su neispravni",
+    "description":"Message to display when an error occurred during restore"
+  },
+  "aboutResetDataConfirm":{
+    "message":"Sve vaše postavke će biti obrisane i uBlock će se ponovno pokrenuti.  \n\nVraćanje µBlock tvorničkih postavki?",
+    "description":"Message asking user to confirm reset"
+  },
+  "errorCantConnectTo":{
+    "message":"Nemoguće se povezati sa {{url}}",
+    "description":"English: Network error: unable to connect to {{url}}"
+  },
+  "subscriberConfirm":{
+    "message":"uBlock: Dodajte slijedeći izvor u vaš izbor filter lista?\n\nNaslov: \"{{title}}\"\nURL: {{url}}",
+    "description":"English: The message seen by the user to confirm subscription to a ABP filter list"
+  },
+  "elapsedOneMinuteAgo":{
+    "message":"prije minutu",
+    "description":"English: a minute ago"
+  },
+  "elapsedManyMinutesAgo":{
+    "message":"prije {{value}} minute\/a",
+    "description":"English: {{value}} minutes ago"
+  },
+  "elapsedOneHourAgo":{
+    "message":"prije jedan sat",
+    "description":"English: an hour ago"
+  },
+  "elapsedManyHoursAgo":{
+    "message":"prije {{value}} sata\/i",
+    "description":"English: {{value}} hours ago"
+  },
+  "elapsedOneDayAgo":{
+    "message":"prije jedan dan",
+    "description":"English: a day ago"
+  },
+  "elapsedManyDaysAgo":{
+    "message":"prije {{value}} dana",
+    "description":"English: {{value}} days ago"
+  },
+  "showDashboardButton":{
+    "message":"Prikaži kontrolnu ploču",
+    "description":"Firefox\/Fennec-specific: Show Dashboard"
+  },
+  "showNetworkLogButton":{
+    "message":"Prikaži zapis mrežnih zahtjeva",
+    "description":"Firefox\/Fennec-specific: Show Network Request Log"
+  },
+  "fennecMenuItemBlockingOff":{
+    "message":"isključen",
+    "description":"Firefox-specific: appears as 'uBlock (off)'"
+  },
+  "docblockedPrompt1":{
+    "message":"uBlock je onemogućio učitavanje sljedeće stranice:",
+    "description":"English: uBlock has prevented the following page from loading:"
+  },
+  "docblockedPrompt2":{
+    "message":"Zbog sljedećeg filtera",
+    "description":"English: Because of the following filter"
+  },
+  "docblockedBack":{
+    "message":"Natrag",
+    "description":"English: Go back"
+  },
+  "docblockedClose":{
+    "message":"Zatvori ovaj prozor",
+    "description":"English: Close this window"
+  },
+  "docblockedProceed":{
+    "message":"Isključi strogo blokiranje za {{hostname}}",
+    "description":"English: Disable strict blocking for {{hostname}} ..."
+  },
+  "docblockedDisableTemporary":{
+    "message":"Privremeno",
+    "description":"English: Temporarily"
+  },
+  "docblockedDisablePermanent":{
+    "message":"Trajno",
+    "description":"English: Permanently"
+  },
+  "dummy":{
+    "message":"This entry must be the last one",
+    "description":"so we dont need to deal with comma for last entry"
+  }
+}

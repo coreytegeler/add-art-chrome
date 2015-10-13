@@ -5,6 +5,11 @@
   "description": "Replacing ads with art.",
   "author" : "Corey Tegeler",
   "version": "0.1",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "64": "images/icon-64.png"
+  },
   
   "browser_action": {
     "default_icon": "images/icon-64.png",
@@ -13,19 +18,41 @@
   },
 
   "permissions": [
+    "contextMenus",
     "storage",
-    "http://*.add-art.org/",
+    "tabs",
+    "unlimitedStorage",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking",
     "http://*/*",
     "https://*/*"
   ],
-
+  "web_accessible_resources" : ["images/*"],
+  "content_scripts": [
+    {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["uBlock/js/vapi-client.js", "uBlock/js/contentscript-start.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+    {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["uBlock/js/contentscript-end.js"],
+        "run_at": "document_end",
+        "all_frames": true
+    },
+    {
+        "matches": [
+            "https://*.adblockplus.org/*",
+            "https://*.adblockplus.me/*",
+            "https://www.fanboy.co.nz/*"
+        ],
+        "js": ["uBlock/js/subscriber.js"],
+        "run_at": "document_idle"
+    }
+  ],
   "background": {
-    "scripts": [
-      "js/jquery-1.11.2.min.js",
-      "js/helpers.js",
-      "js/defaultSources.js",
-      "js/main.js"
-    ],
-    "persistent": false
+    "page": "uBlock/background.html"
   }
 }

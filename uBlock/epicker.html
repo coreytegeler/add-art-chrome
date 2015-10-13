@@ -1,0 +1,163 @@
+<head>
+<meta charset="utf-8">
+<style>
+:focus {
+    outline: none;
+}
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font: 12px sans-serif;
+    background: transparent !important;
+    color: #333;
+}
+ul, li, div {
+    display: block;
+}
+ul {
+    margin: 0.25em 0 0 0;
+}
+button {
+    margin: 0 0 0 2px;
+    border: 1px solid #aaa;
+    padding: 4px 6px;
+    box-sizing: border-box;
+    box-shadow: none;
+    border-radius: 3px;
+    color: #444;
+    background-color: #ccc;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #eee;
+}
+button:disabled {
+    color: #999;
+    background-color: #ccc;
+}
+#create:not(:disabled) {
+    background-color: #ffdca8;
+}
+section {
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 8em;
+    position: relative;
+    width: 100%;
+}
+textarea {
+    background-color: #fff;
+    border: 0;
+    box-sizing: border-box;
+    font: 11px monospace;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    resize: none;
+    width: 100%;
+}
+div {
+    bottom: 1px;
+    direction: ltr;
+    opacity: 1;
+    position: absolute;
+    right: 1px;
+}
+textarea:focus + div {
+    opacity: 0.2;
+}
+textarea:focus + div:hover {
+    opacity: 1;
+}
+ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+    overflow: hidden;
+}
+body > ul > li {
+    padding-top: 3px;
+}
+ul > li > span:nth-of-type(1) {
+    font-weight: bold;
+}
+ul > li > span:nth-of-type(2) {
+    font-size: smaller;
+    color: gray;
+}
+ul > li > ul {
+    background-color: #eee;
+    list-style-type: none;
+    margin: 0 0 0 1em;
+    overflow: hidden;
+    text-align: left;
+}
+ul > li > ul > li {
+    font: 11px monospace;
+    white-space: nowrap;
+    cursor: pointer;
+    direction: ltr;
+}
+ul > li > ul > li:hover {
+    background-color: rgba(255,255,255,1);
+}
+svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: crosshair;
+    width: 100%;
+    height: 100%;
+}
+.paused > svg {
+    cursor: not-allowed;
+}
+svg > path:first-child {
+    fill: rgba(0,0,0,0.75);
+    fill-rule: evenodd;
+}
+svg > path + path {
+    stroke: #F00;
+    stroke-width: 0.5px;
+    fill: rgba(255,31,31,0.25);
+}
+aside {
+    background-color: rgba(255,255,255,0.9);
+    bottom: 4px;
+    padding: 4px;
+    display: none;
+    position: fixed;
+    right: 4px;
+    width: 30em;
+}
+body.paused > aside {
+    opacity: 0.2;
+    display: block;
+}
+body.paused > aside:hover {
+    opacity: 1;
+}
+</style>
+</head>
+
+<body direction="{{bidi_dir}}">
+<svg><path></path><path></path></svg>
+<aside>
+<section>
+    <textarea lang="en" dir="ltr" spellcheck="false"></textarea>
+    <div><button id="create" type="button" disabled="disabled">{{create}}</button><button id="pick" type="button">{{pick}}</button><button id="quit" type="button">{{quit}}</button></div>
+</section>
+<ul>
+    <li id="netFilters">
+        <span>{{netFilters}}</span><ul lang="en" class="changeFilter"></ul>
+    </li>
+    <li id="cosmeticFilters">
+        <span>{{cosmeticFilters}}</span> <span>{{cosmeticFiltersHint}}</span>
+        <ul lang="en" class="changeFilter"></ul>
+    </li>
+</ul>
+</aside>
+</body>

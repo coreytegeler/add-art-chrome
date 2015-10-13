@@ -1,0 +1,530 @@
+{
+  "extName":{
+    "message":"uBlock",
+    "description":"extension name."
+  },
+  "extShortDesc":{
+    "message":"Finalment, un bloquejador efficient, amb poc ús de memòria i processador.",
+    "description":"this will be in the chrome web store: must be 132 characters or less"
+  },
+  "dashboardName":{
+    "message":"µBlock — Tauler de control",
+    "description":"English: uBlock — Dashboard"
+  },
+  "settingsPageName":{
+    "message":"Configuració",
+    "description":"appears as tab name in dashboard"
+  },
+  "3pPageName":{
+    "message":"Filtres de tercers",
+    "description":"appears as tab name in dashboard"
+  },
+  "1pPageName":{
+    "message":"Els vostres filtres",
+    "description":"appears as tab name in dashboard"
+  },
+  "rulesPageName":{
+    "message":"Les meves regles",
+    "description":"appears as tab name in dashboard"
+  },
+  "whitelistPageName":{
+    "message":"Llista blanca",
+    "description":"appears as tab name in dashboard"
+  },
+  "statsPageName":{
+    "message":"µBlock — Registre de peticions de xarxa",
+    "description":"Title for the network request log window"
+  },
+  "aboutPageName":{
+    "message":"Quant a",
+    "description":"appears as tab name in dashboard"
+  },
+  "popupPowerSwitchInfo":{
+    "message":"Clic: habilita\/inhabilita l'µBlock per a aquest lloc.\n\nCtrl+clic: inhabilita l'µBlock només en aquesta pàgina.",
+    "description":"English: Click: disable\/enable uBlock for this site.\n\nCtrl+click: disable uBlock only on this page."
+  },
+  "popupBlockedRequestPrompt":{
+    "message":"sol·licituds bloquejades",
+    "description":"English: requests blocked"
+  },
+  "popupBlockedOnThisPagePrompt":{
+    "message":"en aquesta pàgina",
+    "description":"English: on this page"
+  },
+  "popupBlockedStats":{
+    "message":"{{count}} o {{percent}}%",
+    "description":"Example: 15 or 13%"
+  },
+  "popupBlockedSinceInstallPrompt":{
+    "message":"des de la instal·lació",
+    "description":"English: since install"
+  },
+  "popupOr":{
+    "message":"o",
+    "description":"English: or"
+  },
+  "popupTipDashboard":{
+    "message":"Clic per obrir el tauler de control",
+    "description":"English: Click to open the dashboard"
+  },
+  "popupTipPicker":{
+    "message":"Entrar al mode de selecció d'elements",
+    "description":"English: Enter element picker mode"
+  },
+  "popupTipLog":{
+    "message":"Anar al registre de peticions",
+    "description":"English: Go to request log"
+  },
+  "popupTipNoPopups":{
+    "message":"No permetis finestres emergents en aquest web",
+    "description":"English: No popups for this site"
+  },
+  "popupTipNoStrictBlocking":{
+    "message":"No bloquis de forma estricta en aquest web",
+    "description":"English: No strict blocking for this site"
+  },
+  "popupAnyRulePrompt":{
+    "message":"tot",
+    "description":""
+  },
+  "popupImageRulePrompt":{
+    "message":"imatges",
+    "description":""
+  },
+  "popup3pAnyRulePrompt":{
+    "message":"de tercers",
+    "description":""
+  },
+  "popupInlineScriptRulePrompt":{
+    "message":"scripts incrustats",
+    "description":""
+  },
+  "popup1pScriptRulePrompt":{
+    "message":"scripts",
+    "description":""
+  },
+  "popup3pScriptRulePrompt":{
+    "message":"scripts de tercers",
+    "description":""
+  },
+  "popup3pFrameRulePrompt":{
+    "message":"marcs de tercers",
+    "description":""
+  },
+  "popupHitDomainCountPrompt":{
+    "message":"dominis connectats",
+    "description":"appears in popup"
+  },
+  "popupHitDomainCount":{
+    "message":"{{count}} de {{total}}",
+    "description":"appears in popup"
+  },
+  "pickerCreate":{
+    "message":"Crear",
+    "description":"English: Create"
+  },
+  "pickerPick":{
+    "message":"Escollir",
+    "description":"English: Pick"
+  },
+  "pickerQuit":{
+    "message":"Sortir",
+    "description":"English: Quit"
+  },
+  "pickerNetFilters":{
+    "message":"Filtres de xarxa",
+    "description":"English: Net filters"
+  },
+  "pickerCosmeticFilters":{
+    "message":"Filtres cosmètics",
+    "description":"English: Cosmetic filters"
+  },
+  "pickerCosmeticFiltersHint":{
+    "message":"Clic, Ctrl+clic",
+    "description":"English: Click, Ctrl-click"
+  },
+  "pickerContextMenuEntry":{
+    "message":"Bloquejar element",
+    "description":"English: Block element"
+  },
+  "settingsCollapseBlockedPrompt":{
+    "message":"Amagar marcardors de posició dels elements bloquejats",
+    "description":"English: Hide placeholders of blocked elements"
+  },
+  "settingsIconBadgePrompt":{
+    "message":"Mostrar el número de peticions bloquejades a l'icona",
+    "description":"English: Show the number of blocked requests on the icon"
+  },
+  "settingsContextMenuPrompt":{
+    "message":"Utilitzar el menú contextual quan sigui possible",
+    "description":"English: Make use of context menu where appropriate"
+  },
+  "settingsAdvancedUserPrompt":{
+    "message":"Sóc un usuari avançat (<a href='https:\/\/github.com\/chrisaljoudi\/uBlock\/wiki\/Advanced-Mode'>Lectura necessària<\/a>)",
+    "description":"English: "
+  },
+  "settingsExperimentalPrompt":{
+    "message":"Habilitar funcions experimentals (<a href='https:\/\/github.com\/chrisaljoudi\/uBlock\/wiki\/Experimental-features'>Quant a<\/a>)",
+    "description":"English: Enable experimental features"
+  },
+  "settingsStorageUsed":{
+    "message":"Emmagatzematge utilitzat: {{value}} bytes",
+    "description":"English: Storage used: {{}} bytes"
+  },
+  "settingsLastRestorePrompt":{
+    "message":"Darrera restauració:",
+    "description":"English: Last restore:"
+  },
+  "settingsLastBackupPrompt":{
+    "message":"Darrera còpia de seguretat:",
+    "description":"English: Last backup:"
+  },
+  "3pListsOfBlockedHostsPrompt":{
+    "message":"{{netFilterCount}} filtres de xarxa ＋ {{cosmeticFilterCount}} filtres cosmètics de:",
+    "description":"English: {{netFilterCount}} network filters ＋ {{cosmeticFilterCount}} cosmetic filters from:"
+  },
+  "3pListsOfBlockedHostsPerListStats":{
+    "message":"{{used}} utilitzats de {{total}}",
+    "description":"English: {{used}} used out of {{total}}"
+  },
+  "3pAutoUpdatePrompt1":{
+    "message":"Actualitzar automàticament la llista de filtres.",
+    "description":"English: Auto-update filter lists."
+  },
+  "3pUpdateNow":{
+    "message":"Actualitza ara",
+    "description":"English: Update now"
+  },
+  "3pPurgeAll":{
+    "message":"Neteja la memòria caché",
+    "description":"English: Purge all caches"
+  },
+  "3pParseAllABPHideFiltersPrompt1":{
+    "message":"Analitzar i aplicar filtres cosmètics.",
+    "description":"English: Parse and enforce Adblock+ element hiding filters."
+  },
+  "3pParseAllABPHideFiltersInfo":{
+    "message":"<p>Aquesta opció permet l'anàlisi i l'aplicació dels <a href=\"https:\/\/adblockplus.org\/en\/faq_internal#elemhide\">filtres compatibles amb l'Adblock Plus &ldquo;element hiding&rdquo;<\/a>. Aquests filtres són principalment cosmètics, que serveixen per amagar elements d'una pàgina web molestos que per defecte no es poden amagar.<\/p><p>Habilitant aquesta opció augmentarà el consum de memòria de l'<i>µBlock<\/i>.<\/p>",
+    "description":"English: see English messages.json"
+  },
+  "3pListsOfBlockedHostsHeader":{
+    "message":"Llistes de servidors bloquejats",
+    "description":"English: Lists of blocked hosts"
+  },
+  "3pApplyChanges":{
+    "message":"Aplicar canvis",
+    "description":"English: Apply changes"
+  },
+  "3pGroupAds":{
+    "message":"Anuncis",
+    "description":"English: Ads"
+  },
+  "3pGroupPrivacy":{
+    "message":"Privacitat",
+    "description":"English: Privacy"
+  },
+  "3pGroupMalware":{
+    "message":"Dominis de malware",
+    "description":"English: Malware domains"
+  },
+  "3pGroupSocial":{
+    "message":"Social",
+    "description":"English: Social"
+  },
+  "3pGroupMultipurpose":{
+    "message":"Polivalent",
+    "description":"English: Multipurpose"
+  },
+  "3pGroupRegions":{
+    "message":"Regions, llengües",
+    "description":"English: Regions, languages"
+  },
+  "3pGroupCustom":{
+    "message":"Personalitzat",
+    "description":"English: Custom"
+  },
+  "3pExternalListsHint":{
+    "message":"Una URL per línia. Línies amb el símbol &lsquo;!&rsquo; s'ignoraran. Adreces URL no vàlides s'ignoraran silenciosament.",
+    "description":"English: One URL per line. Lines prefixed with &lsquo;!&rsquo; will be ignored. Invalid URLs will be silently ignored."
+  },
+  "3pExternalListsApply":{
+    "message":"Analitzar",
+    "description":"English: Parse"
+  },
+  "3pExternalListPurge":{
+    "message":"neteja la memòria",
+    "description":"English: purge cache"
+  },
+  "3pExternalListNew":{
+    "message":"nova versió disponible",
+    "description":"English: new version available"
+  },
+  "3pExternalListObsolete":{
+    "message":"antiquat",
+    "description":"English: outdated"
+  },
+  "3pLastUpdate":{
+    "message":"Darrera actualització: {{ago}}",
+    "description":"English: Last update: {{ago}}, where 'ago' will be replaced with something like '2 days ago'"
+  },
+  "1pFormatHint":{
+    "message":"Un filtre per línia. Un filtre pot ser un domini, o un filtre compatible amb Adblock Plus. Línies amb el símbol &lsquo;!&rsquo; s'ignoraran.",
+    "description":"English: One filter per line. A filter can be a plain hostname, or an Adblock Plus-compatible filter. Lines prefixed with &lsquo;!&rsquo; will be ignored."
+  },
+  "1pImport":{
+    "message":"Importar i annexar",
+    "description":"English: Import and append"
+  },
+  "1pExport":{
+    "message":"Exportar",
+    "description":"English: Export"
+  },
+  "1pExportFilename":{
+    "message":"ublock-custom-filters_{{datetime}}.txt",
+    "description":"English: my-ublock-static-filters_{{datetime}}.txt"
+  },
+  "1pApplyChanges":{
+    "message":"Aplicar canvis",
+    "description":"English: Apply changes"
+  },
+  "rulesPermanentHeader":{
+    "message":"Normes permanents",
+    "description":"header"
+  },
+  "rulesTemporaryHeader":{
+    "message":"Normes temporals",
+    "description":"header"
+  },
+  "rulesRevert":{
+    "message":"Desfer",
+    "description":"This will remove all temporary rules"
+  },
+  "rulesCommit":{
+    "message":"Establir",
+    "description":"This will persist temporary rules"
+  },
+  "rulesEdit":{
+    "message":"Editar",
+    "description":"Will enable manual-edit mode (textarea)"
+  },
+  "rulesEditSave":{
+    "message":"Desar",
+    "description":"Will save manually-edited content and exit manual-edit mode"
+  },
+  "rulesEditDiscard":{
+    "message":"Descartar",
+    "description":"Will discard manually-edited content and exit manual-edit mode"
+  },
+  "rulesImport":{
+    "message":"Importar des de fitxer...",
+    "description":""
+  },
+  "rulesExport":{
+    "message":"Exportar a fitxer...",
+    "description":""
+  },
+  "rulesDefaultFileName":{
+    "message":"my-ublock-dynamic-rules.txt",
+    "description":"default file name to use"
+  },
+  "rulesHint":{
+    "message":"Llista de regles de filtrat dinàmic.",
+    "description":"English: List of your dynamic filtering rules."
+  },
+  "rulesFormatHint":{
+    "message":"Sintaxi de les regles: <code>origen destinació tipus acció<\/code> (<a href='https:\/\/github.com\/chrisaljoudi\/uBlock\/wiki\/Dynamic-filtering:-rule-syntax'>documentació<\/a>).",
+    "description":"English: dynamic rule syntax and full documentation."
+  },
+  "whitelistPrompt":{
+    "message":"Llistat dels noms de servidor amb que s'inhabilitarà l'µBlock. Una entrada per línia. S'ignoraran els noms de servidor no vàlid.",
+    "description":"English: Your list of host names for which uBlock will be disabled. One host name per line. Invalid host names will be silently ignored."
+  },
+  "whitelistImport":{
+    "message":"Imporar i annexar",
+    "description":"English: Import and append"
+  },
+  "whitelistExport":{
+    "message":"Exportar",
+    "description":"English: Export"
+  },
+  "whitelistExportFilename":{
+    "message":"ublock-whitelist_{{datetime}}.txt",
+    "description":"English: my-ublock-whitelist_{{datetime}}.txt"
+  },
+  "whitelistApply":{
+    "message":"Aplicar canvis",
+    "description":"English: Apply changes"
+  },
+  "logNetRequestsPrompt":{
+    "message":"Habilitar el registre de sol·licituds de xarxa",
+    "description":"English: Enable the logging of network requests"
+  },
+  "logNetRequestsHelp":{
+    "message":"Podeu inspeccionar els detalls de les peticions blocades habilitant aquesta opció. El registre de peticions blocades augmenta el consum de memòria. Per defecte està inhabilitada, atès que normalment no s'utilitza.",
+    "description":"English: see _locales\/en\/messages.log"
+  },
+  "logBlockedRequestsHeader":{
+    "message":"Sol·licituds bloquejades",
+    "description":"English: Blocked requests"
+  },
+  "logAllowedRequestsHeader":{
+    "message":"Sol·licituds permeses",
+    "description":"English: Allowed requests"
+  },
+  "logRequestsHeaderType":{
+    "message":"Tipus",
+    "description":"English: Type"
+  },
+  "logRequestsHeaderDomain":{
+    "message":"Domini",
+    "description":"English: Domain"
+  },
+  "logRequestsHeaderURL":{
+    "message":"URL",
+    "description":"English: URL"
+  },
+  "logRequestsHeaderFilter":{
+    "message":"Filtre",
+    "description":"English: Filter"
+  },
+  "logBlockedRequestsEmpty":{
+    "message":"No hi ha peticions bloquejades per a aquesta pàgina",
+    "description":"English: No blocked requests logged for this page"
+  },
+  "logAllowedRequestsEmpty":{
+    "message":"No hi ha peticions no bloquejades per a aquesta pàgina",
+    "description":"English: No non-blocked requests logged for this page"
+  },
+  "logBehindTheScene":{
+    "message":"Peticions ocultes",
+    "description":"Pretty name for behind-the-scene network requests"
+  },
+  "logFilterPrompt":{
+    "message":"filtrar entrades del registre",
+    "description":"English: filter log entries"
+  },
+  "logMaxEntriesTip":{
+    "message":"Nombre màxim d'entrades del registre",
+    "description":"Tooltip informaing that the input field is to set the maximum number of entries in the log"
+  },
+  "aboutChangelog":{
+    "message":"Registre de canvis",
+    "description":"English: Change log"
+  },
+  "aboutWiki":{
+    "message":"Wiki",
+    "description":"English: project' wiki on Github"
+  },
+  "aboutCode":{
+    "message":"Codi font (GPLv3)",
+    "description":"English: Source code (GPLv3)"
+  },
+  "aboutContributors":{
+    "message":"Col·laboradors",
+    "description":"English: Contributors"
+  },
+  "aboutBackupDataButton":{
+    "message":"Còpia de seguretat a un fitxer",
+    "description":"English: Backup to file"
+  },
+  "aboutBackupFilename":{
+    "message":"ublock-backup_{{datetime}}.txt",
+    "description":"English: my-ublock-backup_{{datetime}}.txt"
+  },
+  "aboutRestoreDataButton":{
+    "message":"Restaurar des d'un fitxer...",
+    "description":"English: Restore from file..."
+  },
+  "aboutResetDataButton":{
+    "message":"Restaurar als valors de fàbrica...",
+    "description":"English: Reset to default settings..."
+  },
+  "aboutRestoreDataConfirm":{
+    "message":"La configuració es sobreescriurà amb la còpia de seguretat del {{time}}, i es reiniciarà l'µBlock.\n\nVoleu restaurar la configuració amb la còpia de seguretat?",
+    "description":"Message asking user to confirm restore"
+  },
+  "aboutRestoreDataError":{
+    "message":"Les dades no es poden llegir o no son vàlides",
+    "description":"Message to display when an error occurred during restore"
+  },
+  "aboutResetDataConfirm":{
+    "message":"La configuració serà suprimida i es reiniciarà l'µBlock.\n\nVoleu reiniciar l'µBlock als valors per defecte?",
+    "description":"Message asking user to confirm reset"
+  },
+  "errorCantConnectTo":{
+    "message":"Impossible connectar a {{url}}",
+    "description":"English: Network error: unable to connect to {{url}}"
+  },
+  "subscriberConfirm":{
+    "message":"µBlock: Voleu afegir aquest enllaç a la llista de filtres personalitzats?\n\nTítol: \"{{title}}\"\nURL: {{url}}",
+    "description":"English: The message seen by the user to confirm subscription to a ABP filter list"
+  },
+  "elapsedOneMinuteAgo":{
+    "message":"fa un minut",
+    "description":"English: a minute ago"
+  },
+  "elapsedManyMinutesAgo":{
+    "message":"fa {{value}} minuts",
+    "description":"English: {{value}} minutes ago"
+  },
+  "elapsedOneHourAgo":{
+    "message":"fa una hora",
+    "description":"English: an hour ago"
+  },
+  "elapsedManyHoursAgo":{
+    "message":"fa {{value}} hores",
+    "description":"English: {{value}} hours ago"
+  },
+  "elapsedOneDayAgo":{
+    "message":"fa un dia",
+    "description":"English: a day ago"
+  },
+  "elapsedManyDaysAgo":{
+    "message":"fa {{value}} dies",
+    "description":"English: {{value}} days ago"
+  },
+  "showDashboardButton":{
+    "message":"Mostrar Tauler de control",
+    "description":"Firefox\/Fennec-specific: Show Dashboard"
+  },
+  "showNetworkLogButton":{
+    "message":"Mostrar registre de peticions de xarxa",
+    "description":"Firefox\/Fennec-specific: Show Network Request Log"
+  },
+  "fennecMenuItemBlockingOff":{
+    "message":"desactivat",
+    "description":"Firefox-specific: appears as 'uBlock (off)'"
+  },
+  "docblockedPrompt1":{
+    "message":"L'ublock ha rebutjat contingut d'aquest web:",
+    "description":"English: uBlock has prevented the following page from loading:"
+  },
+  "docblockedPrompt2":{
+    "message":"Detectat per aquest filtre",
+    "description":"English: Because of the following filter"
+  },
+  "docblockedBack":{
+    "message":"Enrere",
+    "description":"English: Go back"
+  },
+  "docblockedClose":{
+    "message":"Tanca aquesta finestra",
+    "description":"English: Close this window"
+  },
+  "docblockedProceed":{
+    "message":"Inhabilita el blocatge estricte per {{hostname}}",
+    "description":"English: Disable strict blocking for {{hostname}} ..."
+  },
+  "docblockedDisableTemporary":{
+    "message":"Temporalment",
+    "description":"English: Temporarily"
+  },
+  "docblockedDisablePermanent":{
+    "message":"Permanentment",
+    "description":"English: Permanently"
+  },
+  "dummy":{
+    "message":"Aquesta entrada ha de ser l'última",
+    "description":"so we dont need to deal with comma for last entry"
+  }
+}
