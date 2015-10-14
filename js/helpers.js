@@ -15,3 +15,48 @@ function stripHTML(html) {
 function stripCDATA(html) {
     return html.replace('<![CDATA[','').replace(']]>','');
 }
+
+//parses through a show's RSS data to get content that populates the interface
+function parseRSS(rss) {
+	var item = rss.getElementsByTagName('item')[0];
+	var get = function(type) {
+		return item.getElementsByTagName(type)[0].innerHTML;
+	};
+
+	var title = get('title');
+	var description = stripCDATA(get('encoded'));
+	var thumbnail = get('thumbnail');
+	var images = get('artshow');
+	var date = cleanDate(get('pubDate'));
+	var link = get('showurl');
+
+	var showObject = {
+		'title' : title,
+		'description' : description,
+		'thumbnail' : thumbnail,
+		'images' : images,
+		'date' : date,
+		'link' : link
+	};
+
+	return showObject
+}
+
+function getBase64Image(img) {
+    // Create an empty canvas element
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
+
+    // Copy the image contents to the canvas
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+
+    // Get the data-URL formatted image
+    // Firefox supports PNG and JPEG. You could check img.src to
+    // guess the original format, but be aware the using "image/jpg"
+    // will re-encode the image.
+    var dataURL = canvas.toDataURL("image/png");
+
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+}

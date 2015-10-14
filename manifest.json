@@ -38,7 +38,7 @@
     },
     {
         "matches": ["http://*/*", "https://*/*"],
-        "js": ["uBlock/js/contentscript-end.js"],
+        "js": ["js/helpers.js", "js/artAdder.js", "uBlock/js/contentscript-end.js"],
         "run_at": "document_end",
         "all_frames": true
     },

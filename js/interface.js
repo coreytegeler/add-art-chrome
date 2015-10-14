@@ -70,7 +70,16 @@ function addModules(show, i) {
 
 function selectSource(event) {
 	var selectedSource = $(event.currentTarget).attr('data-show');
-	console.log(selectSource);
-	chrome.storage.sync.set({'selectedShow': selectedSource});
-	self.close();
+	chrome.extension.getBackgroundPage().console.log(selectedSource);
+
+  var feed = 'http://add-art.org/category/' + selectedSource + '/feed/';
+  $.get(feed, function (rss) {
+    var parsedData = parseRSS(rss);
+    chrome.extension.getBackgroundPage().console.log(parsedData);
+
+  })
+  
+    
+	//chrome.storage.sync.set({'selectedShow': selectedSource});
+	//self.close();
 }

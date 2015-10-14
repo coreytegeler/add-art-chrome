@@ -450,6 +450,7 @@ var uBlockCollapser = (function() {
     var hideElements = function(selectors) {
         // https://github.com/chrisaljoudi/uBlock/issues/207
         // Do not call querySelectorAll() using invalid CSS selectors
+        // 
         if ( selectors.length === 0 ) {
             return;
         }
@@ -462,29 +463,10 @@ var uBlockCollapser = (function() {
         var i = elems.length;
         while ( i-- ) {
             //elems[i].style.setProperty('display', 'none', 'important');
-            processAdNode(elems[i])
+            vAPI.artAdder.processAdNode(elems[i])
         }
     };
 
-    var processAdNode = function (elem) {
-
-      if (elem.offsetWidth < 1) return
-      if (elem.offsetHeight < 1) return
-      if (elem.tagName !== 'IFRAME' 
-          && elem.tagName !== 'IMG'
-          && elem.tagName !== 'OBJECT'
-          && elem.tagName !== 'A'
-          ) return
-
-      var art = new Image
-      art.style.width = elem.offsetWidth + 'px'
-      art.style.height = elem.offsetHeight + 'px'
-      art.style.display = 'block'
-      art.src = chrome.extension.getURL('/images/970x90.png')
-      elem.parentElement.appendChild(art)
-      elem.parentElement.removeChild(elem)
-      return true
-    };
 
     // Extract and return the staged nodes which (may) match the selectors.
 

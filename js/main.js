@@ -68,31 +68,6 @@ function requestFeeds() {
 	});
 }
 
-//parses through a show's RSS data to get content that populates the interface
-function parseRSS(rss) {
-	var item = rss.getElementsByTagName('item')[0];
-	var get = function(type) {
-		return item.getElementsByTagName(type)[0].innerHTML;
-	};
-
-	var title = get('title');
-	var description = stripCDATA(get('encoded'));
-	var thumbnail = get('thumbnail');
-	var images = get('artshow');
-	var date = cleanDate(get('pubDate'));
-	var link = get('showurl');
-
-	var showObject = {
-		'title' : title,
-		'description' : description,
-		'thumbnail' : thumbnail,
-		'images' : images,
-		'date' : date,
-		'link' : link
-	};
-
-	return showObject
-}
 
 
 
