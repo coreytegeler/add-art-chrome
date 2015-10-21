@@ -6,6 +6,16 @@ chrome.runtime.onStartup.addListener(function(event) {
 	init(event);
 });
 
+chrome.extension.onConnect.addListener(function (port) {
+  port.onMessage.addListener(function (msg) {
+    var key = msg.msg.what
+    if (vAPI.artAdder[key] && typeof vAPI.artAdder[key] === 'function') {
+      vAPI.artAdder[key](msg.msg[key])
+    }
+  })
+})
+
+
 //gets RSS feed links for default shows in local JSON file
 function init(event) {
 	reason = event.reason;
@@ -26,6 +36,17 @@ function init(event) {
 
 		// }
 	}
+  // have we chosen a show?
+  vAPI.artAdder.getExhibition()
+  .then(function (exhibition) {
+    // no
+    if (!exhibition) {
+      chrome.storage.sync.get('defaultFeeds', function (feeds) {
+        var rand = feeds.defaultFeeds[Math.floor(feeds.defaultFeeds.length * Math.random())].name
+        vAPI.artAdder.exhibition(rand)
+      })
+    }
+  })
 	
 }
 

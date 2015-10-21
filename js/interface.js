@@ -5,6 +5,8 @@ chrome.storage.sync.get("defaultShowData", function(object) {
 	}
 });
 
+var port = chrome.extension.connect({ name : 'popup' })
+
 var sources = [];
 function insertSources(shows) {
 	for(var i=0; i<shows.length; i++) {
@@ -70,16 +72,7 @@ function addModules(show, i) {
 
 function selectSource(event) {
 	var selectedSource = $(event.currentTarget).attr('data-show');
-	chrome.extension.getBackgroundPage().console.log(selectedSource);
 
-  var feed = 'http://add-art.org/category/' + selectedSource + '/feed/';
-  $.get(feed, function (rss) {
-    var parsedData = parseRSS(rss);
-    chrome.extension.getBackgroundPage().console.log(parsedData);
-
-  })
-  
-    
-	//chrome.storage.sync.set({'selectedShow': selectedSource});
-	//self.close();
+  port.postMessage({ msg : { what : 'exhibition', exhibition : selectedSource }})
+  self.close()
 }
