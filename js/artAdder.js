@@ -27,13 +27,14 @@
   var artAdder = {
     processAdNode : function (elem) {
 
-      if (elem.offsetWidth < 1) return
-      if (elem.offsetHeight < 1) return
+      if (elem.offsetWidth < 2) return
+      if (elem.offsetHeight < 2) return
       if (elem.tagName !== 'IFRAME' 
           && elem.tagName !== 'IMG'
           && elem.tagName !== 'OBJECT'
           && elem.tagName !== 'A'
           ) return
+
 
       var that = this
       artAdder.getExhibition()

@@ -459,12 +459,16 @@ var uBlockCollapser = (function() {
         }
         // https://github.com/chrisaljoudi/uBlock/issues/158
         // Using CSSStyleDeclaration.setProperty is more reliable
-        var elems = document.querySelectorAll(selectors);
-        var i = elems.length;
-        while ( i-- ) {
-            //elems[i].style.setProperty('display', 'none', 'important');
-            vAPI.artAdder.processAdNode(elems[i])
+        function process () {
+          var elems = document.querySelectorAll(selectors);
+          var i = elems.length;
+          while ( i-- ) {
+              //elems[i].style.setProperty('display', 'none', 'important');
+              vAPI.artAdder.processAdNode(elems[i])
+          }
         }
+        process()
+        setTimeout(process, 500) // check again in a half sec to catch slow ones
     };
 
 

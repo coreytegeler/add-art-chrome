@@ -5,16 +5,22 @@ chrome.storage.sync.get("defaultShowData", function(object) {
 	}
 });
 
+
 var port = chrome.extension.connect({ name : 'popup' })
+var currentExhibition
 
 var sources = [];
 function insertSources(shows) {
-	for(var i=0; i<shows.length; i++) {
-		sources.push(shows[i]);
-		if(sources.length == shows.length) {
-			buildInterface(sources);
-		}
-	}
+  artAdder.getExhibition()
+  .then(function (exhibition) {
+    currentExhibition = exhibition
+    for(var i=0; i<shows.length; i++) {
+      sources.push(shows[i]);
+      if(sources.length == shows.length) {
+        buildInterface(sources);
+      }
+    }
+  })
 }
 
 function buildInterface(sources) {
@@ -47,10 +53,13 @@ function buildInterface(sources) {
 }
 
 function addModules(show, i) {
-	console.log(show);
 	var $square = $('ul#shows li.show').eq(i);
 	$square.attr('data-title', show.title);
 	$square.find('.thumb img').attr('src', show.thumbnail);
+
+  if (currentExhibition && currentExhibition.info.title === show.title) { 
+    $square.addClass('active')
+  }
 
 	$square.click(function() {
 		var title = $(this).attr('data-title');

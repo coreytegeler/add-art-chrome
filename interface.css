@@ -44,7 +44,7 @@ header#top {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 3;
+	z-index: 10;
 	background-image: url('images/logo.png');
 	background-repeat: no-repeat;
     background-position: center; 
@@ -59,7 +59,7 @@ header#top #addSource {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 4;
+    z-index: 11;
     height: 60px;
     width: 60px;
     cursor: pointer;
@@ -73,7 +73,7 @@ header#top #close {
     position: absolute;
     top: -400px;
     right: 0px;
-    z-index: 4;
+    z-index: 11;
     height: 60px;
     width: 60px;
     cursor: pointer;
@@ -111,6 +111,19 @@ header#top #close.visible {
 	overflow: hidden;
 	position: relative;
 }
+#squares ul#shows li.show .active {
+  width: 150px;
+  height: 150px;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  background: url(images/icon-64.png) center center no-repeat rgba(0,0,0,0.2);
+  display: none; 
+  z-index: 3;
+}
+#squares ul#shows li.show.active .active {
+  display: block; 
+}
 
 #squares ul#shows li.show .content {
 	
@@ -138,7 +151,7 @@ header#top #close.visible {
 #infoPages {
 	position: absolute;
 	top: -100%;
-	z-index: 2;
+	z-index: 4;
 }
 .infoPage {
 	background: white;
@@ -204,7 +217,7 @@ header#top #close.visible {
 	left: 0px;
 	height: 100%;
 	width: 100%;
-	z-index: 2;
+	z-index: 4;
 	display: table;
 	background: #138acb;
 	overflow-y: scroll;
