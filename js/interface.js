@@ -1,12 +1,13 @@
-chrome.storage.sync.get("defaultShowData", function(object) {
-	if (!chrome.runtime.error) {
-		console.log(object);
-		insertSources(object['defaultShowData']);
-	}
-});
+if (typeof chrome !== 'undefined') {
+  var port = chrome.extension.connect({ name : 'popup' })
+}
+
+artAdder.localGet('defaultShowData')
+.then(function (object) {
+  insertSources(object['defaultShowData']);
+})
 
 
-var port = chrome.extension.connect({ name : 'popup' })
 var currentExhibition
 
 var sources = [];

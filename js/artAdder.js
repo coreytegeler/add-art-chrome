@@ -120,16 +120,34 @@
       })
     },
     setExhibition : function (exhibition) {
-      chrome.storage.local.set({'exhibition': exhibition });
       currentExhibition = Q(exhibition)
+      return this.localSet('exhibition', exhibition)
     },
     getExhibition : function () {
       if (currentExhibition) return currentExhibition
       var d = Q.defer()
-      chrome.storage.local.get('exhibition', function (exhibition) {
+      this.localGet('exhibition')
+      .then(function (exhibition) {
         currentExhibition = Q(exhibition.exhibition)
         d.resolve(exhibition.exhibition)
       })
+      return d.promise
+    },
+    // abstract storage for different browsers
+    localSet : function (key, thing) {
+      var d = Q.defer()
+      if (typeof chrome !== 'undefined') {
+        var save = {}
+        save[key] = thing
+        chrome.storage.local.set(save, d.resolve)
+      }
+      return d.promise
+    },
+    localGet : function (key) {
+      var d = Q.defer()
+      if (typeof chrome !== 'undefined') {
+        chrome.storage.local.get(key, d.resolve)
+      }
       return d.promise
     },
 
