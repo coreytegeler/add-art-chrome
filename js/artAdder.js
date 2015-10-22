@@ -114,11 +114,10 @@
     },
     fetchExhibition : function (name) {
       var feed = 'http://add-art.org/category/' + name.replace(/ /g, '-') + '/feed/';
-      var d = Q.defer()
-      $.get(feed, function (rss) {
-         d.resolve(parseRSS(rss))
+      return fetchFeed(feed)
+      .then(function (items) {
+        return items[0]
       })
-      return d.promise
     },
     setExhibition : function (exhibition) {
       chrome.storage.local.set({'exhibition': exhibition });

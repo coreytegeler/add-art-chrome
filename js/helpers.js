@@ -18,7 +18,15 @@ function stripCDATA(html) {
 
 //parses through a show's RSS data to get content that populates the interface
 function parseRSS(rss) {
-	var item = rss.getElementsByTagName('item')[0];
+	var item = rss.getElementsByTagName('item')[0]
+  return parseItemRss(item)
+}
+
+function parseAllRSS(rss){
+  return [].slice.call(rss.getElementsByTagName('item')).map(parseItemRss)
+}
+
+function parseItemRss (item) {
 	var get = function(type) {
 		return item.getElementsByTagName(type)[0].innerHTML;
 	};
@@ -59,4 +67,12 @@ function getBase64Image(img) {
     var dataURL = canvas.toDataURL("image/png");
 
     return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+}
+
+function fetchFeed (url) {
+  var d = Q.defer()
+  $.get(url, function (rss) {
+     d.resolve(parseAllRSS(rss))
+  })
+  return d.promise
 }

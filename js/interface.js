@@ -56,6 +56,7 @@ function addModules(show, i) {
 	var $square = $('ul#shows li.show').eq(i);
 	$square.attr('data-title', show.title);
 	$square.find('.thumb img').attr('src', show.thumbnail);
+  $square.removeClass('active')
 
   if (currentExhibition && currentExhibition.info.title === show.title) { 
     $square.addClass('active')
