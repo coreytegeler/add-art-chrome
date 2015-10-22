@@ -18,8 +18,6 @@ if (typeof chrome !== 'undefined') {
 }
 
 function init(event) {
-	reason = event.reason
-
   syncDefaultList()
   .then(vAPI.artAdder.getExhibition) // have we chosen a show?
   .then(function (exhibition) {
@@ -27,7 +25,7 @@ function init(event) {
     if (!exhibition) {
       vAPI.artAdder.localGet('defaultShowData')
       .then(function (feeds) {
-        var rand = feeds.defaultShowData[Math.floor(feeds.defaultShowData.length * Math.random())].name
+        var rand = feeds.defaultShowData[Math.floor(feeds.defaultShowData.length * Math.random())].title
         vAPI.artAdder.exhibition(rand)
       })
     }
