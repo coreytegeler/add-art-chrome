@@ -35,22 +35,62 @@
           && elem.tagName !== 'A'
           ) return
 
+      if ($(elem).data('replaced')) return;
+      $(elem).data('replaced', true)
 
       var that = this
       artAdder.getExhibition()
       .then(function (exhibition) {
-        var bestSize = that.askLink(elem.offsetWidth, elem.offsetHeight)
+        var origW = elem.offsetWidth
+        var origH = elem.offsetHeight
+        var bestSize = that.askLink(origW, origH)
+
+        var $wrap = $('<div>').css({
+          width: origW,
+          height: origH,
+          position : 'relative',
+          perspective : '1000px'
+        })
+        var $inner = $('<div>').css({
+          width: '100%',
+          height : '100%',
+          position : 'absolute',
+          transformStyle : 'preserve-3d',
+          transform : 'translateZ(-'+(Math.ceil(origH/2))+'px)',
+          transition : 'transform 0.5s'
+        })
 
         var art  = document.createElement('a')
         art.href = exhibition.info.link 
         art.title = 'Replaced by Add-Art'
-        art.style.width = bestSize[0] + 'px'
-        art.style.height = bestSize[1] + 'px'
+        art.style.width = ( origW - 4 ) + 'px'
+        art.style.height = ( origH - 4 ) + 'px'
         art.style.display = 'block'
+        art.style.position = 'absolute'
         art.style.background = "url(" + getImgSrc(exhibition.entries, bestSize[0], bestSize[1])  + ")"
+        art.style.webkitTransform = "rotateX(-90deg) translateZ("+Math.ceil(origH/2)+"px)"
 
-        elem.parentElement.appendChild(art)
-        elem.parentElement.removeChild(elem)
+        elem.style.webkitTransform = 'rotateY(0deg) translateZ('+(Math.ceil(origH/2))+'px)'
+        elem.style.width = origW + 'px'
+        elem.style.height = origH + 'px'
+        elem.style.display = 'block'
+        elem.style.position = 'absolute'
+
+        $inner.append(art).append($(elem).clone())
+        $wrap.append($inner)
+
+        $(elem.parentElement).append($wrap)
+
+        console.log('called')
+
+        // rotate it
+        setTimeout(function () {
+          $inner.css('transform', "translateZ(-"+(Math.ceil(origH/2))+"px) rotateX(90deg)")
+            setTimeout(function () {
+              $(elem).remove()
+            }, 500)
+        }, 50)
+
       })
       return true
     },

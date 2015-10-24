@@ -4,6 +4,8 @@ The extension is currently functional. It uses [this fork][4] of [uBlock][5] und
 
 We'd love for you to help with this.
 
+![REPLACED!](images/cover.gif)
+
 [1]: http://visitsteve.com
 [2]: http://github.com/slambert/add-art
 [3]: https://github.com/coreytegeler/Add-Art-chrome/fork
