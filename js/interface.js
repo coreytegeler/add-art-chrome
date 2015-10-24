@@ -29,16 +29,15 @@ function buildInterface(sources) {
 	$showTemplate = $('ul#shows li.show');
 	$infoPages = $('#infoPages');
 	$infoPageTemplate = $('#infoPages .infoPage');
+  $('body').addClass('loading')
 
 	for(var i = 0; i < sources.length; i++) {
 		addModules(sources[i],i);
-		if(i!=sources.length-1) {
-		  $shows.append($showTemplate.clone());
-		  $infoPages.append($infoPageTemplate.clone());
-		} else {
-		  $('body').removeClass('loading');
-		}
+    $shows.append($showTemplate.clone());
+    $infoPages.append($infoPageTemplate.clone());
 	}
+  $('body').removeClass('loading');
+
 
 	$('#close').click(function() {
 		$('header#top #close').removeClass('visible');
