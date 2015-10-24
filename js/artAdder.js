@@ -75,6 +75,8 @@
         art.style.display = 'block'
         art.style.position = 'absolute'
         art.style.background = "url(" + getImgSrc(exhibition.entries, bestSize[0], bestSize[1])  + ")"
+        art.style.backgroundSize = "cover"
+        art.style.backgroundRepeat = "no-repeat"
         art.style.webkitTransform = "rotateX(-90deg) translateZ("+Math.ceil(origH/2)+"px)"
 
         elem.style.webkitTransform = 'rotateY(0deg) translateZ('+(Math.ceil(origH/2))+'px)'
@@ -83,7 +85,8 @@
         elem.style.display = 'block'
         elem.style.position = 'absolute'
 
-        $inner.append(art).append($(elem).clone())
+        var clone = $(elem).clone()
+        $inner.append(art).append(clone)
         $wrap.append($inner)
         $(elem.parentElement).append($wrap)
 
@@ -92,6 +95,7 @@
           $inner.css('transform', "translateZ(-"+(Math.ceil(origH/2))+"px) rotateX(90deg)")
             setTimeout(function () {
               $(elem).remove()
+              clone.remove()
             }, 500)
         }, 50)
 
