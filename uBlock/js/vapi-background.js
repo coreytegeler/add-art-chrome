@@ -483,7 +483,7 @@ vAPI.setIcon = function(tabId, iconStatus, badge) {
         chrome.browserAction.setIcon({ tabId: tabId, path: ICON_PATHS[iconStatus] }, onIconReady);
     }
     else if(state.dirty & 2) {
-        chrome.browserAction.setBadgeText({ tabId: tabId, text: badge });
+      //chrome.browserAction.setBadgeText({ text: badge });
     }
 };
 

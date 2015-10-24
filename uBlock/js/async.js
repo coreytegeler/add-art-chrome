@@ -188,6 +188,7 @@ return asyncJobManager;
         if ( µb.userSettings.showIconBadge && netFiltering && pageStore.perLoadBlockedRequestCount ) {
             badge = µb.utils.formatCount(pageStore.perLoadBlockedRequestCount);
         }
+        //vAPI.setIcon(tabId, netFiltering ? 'on' : 'off', badge);
         vAPI.setIcon(tabId, netFiltering ? 'on' : 'off', badge);
     };
 

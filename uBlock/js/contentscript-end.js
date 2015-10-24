@@ -188,7 +188,7 @@ var uBlockCollapser = (function() {
         }
         if ( selectors.length !== 0 ) {
             messager.send({
-                what: 'cosmeticFiltersInjected',
+                what: 'cosmeticfiltersinjected',
                 type: 'net',
                 hostname: window.location.hostname,
                 selectors: selectors
@@ -464,7 +464,11 @@ var uBlockCollapser = (function() {
           var i = elems.length;
           while ( i-- ) {
               //elems[i].style.setProperty('display', 'none', 'important');
-              vAPI.artAdder.processAdNode(elems[i])
+              if (vAPI.artAdder.processAdNode(elems[i])){
+                messager.send({
+                  what : 'replacedAd'
+                })
+              }
           }
         }
         process()

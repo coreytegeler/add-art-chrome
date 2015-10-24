@@ -25,6 +25,7 @@
 
 
   var artAdder = {
+    replacedCount : '',
     processAdNode : function (elem) {
 
       if (elem.offsetWidth < 2) return
@@ -37,6 +38,12 @@
 
       if ($(elem).data('replaced')) return;
       $(elem).data('replaced', true)
+
+      if (artAdder.replacedCount === '') {
+        artAdder.replacedCount = 1
+      } else {
+        artAdder.replacedCount++
+      }
 
       var that = this
       artAdder.getExhibition()
@@ -78,10 +85,7 @@
 
         $inner.append(art).append($(elem).clone())
         $wrap.append($inner)
-
         $(elem.parentElement).append($wrap)
-
-        console.log('called')
 
         // rotate it
         setTimeout(function () {

@@ -521,6 +521,9 @@ var onMessage = function(request, sender, callback) {
             }
             break;
 
+        case 'replacedAd':
+            break;
+
         default:
             return vAPI.messaging.UNHANDLED;
     }
