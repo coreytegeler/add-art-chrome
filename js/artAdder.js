@@ -4,6 +4,7 @@
 
   /******************************************************************************/
 
+
   function getExt (filename) {
     return filename.match(/\.(.+)$/)[1].toLowerCase()
   }
@@ -34,6 +35,7 @@
           && elem.tagName !== 'IMG'
           && elem.tagName !== 'OBJECT'
           && elem.tagName !== 'A'
+          && elem.tagName !== 'INS'
           ) return
 
       if ($(elem).data('replaced')) return;
