@@ -28,17 +28,19 @@
     replacedCount : '',
     processAdNode : function (elem) {
 
-      if (elem.offsetWidth < 2) return
-      if (elem.offsetHeight < 2) return
+      var goodBye = false
+      if (elem.offsetWidth < 2) goodBye = true 
+      if (elem.offsetHeight < 2) goodBye = true 
       if (elem.tagName !== 'IFRAME' 
           && elem.tagName !== 'IMG'
           && elem.tagName !== 'OBJECT'
           && elem.tagName !== 'A'
           && elem.tagName !== 'INS'
-          ) return
+          ) goodBye = true 
 
-      if ($(elem).data('replaced')) return;
+      if ($(elem).data('replaced')) goodBye = true 
       $(elem).data('replaced', true)
+      if (goodBye) return
 
       if (artAdder.replacedCount === '') {
         artAdder.replacedCount = 1

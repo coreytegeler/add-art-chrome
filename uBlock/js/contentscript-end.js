@@ -474,7 +474,21 @@ var uBlockCollapser = (function() {
           }
         }
         process()
-        //setTimeout(process, 500) // check again in a half sec to catch slow ones // this is a bad idea i think
+        
+        // balls to the wall or not at all
+        var howMany = 3
+        var tried = 0
+        ;(function checkIFrames() {
+          $('iframe[id^=google_ads_iframe]').each(function (){
+            vAPI.artAdder.processAdNode(this)
+          })
+          if (++tried < howMany) {
+            setTimeout(checkIFrames, 3000)
+          }
+        })()
+
+
+
     };
 
 
