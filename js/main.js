@@ -18,8 +18,8 @@ if (typeof chrome !== 'undefined') {
   chrome.extension.onConnect.addListener(function (port) {
     port.onMessage.addListener(function (msg) {
       var key = msg.msg.what
-      if (vAPI.artAdder[key] && typeof vAPI.artAdder[key] === 'function') {
-        vAPI.artAdder[key](msg.msg[key])
+      if (artAdder[key] && typeof artAdder[key] === 'function') {
+        artAdder[key](msg.msg[key])
       }
     })
   })
@@ -27,11 +27,11 @@ if (typeof chrome !== 'undefined') {
 
 function init(event) {
   return syncDefaultList()
-  .then(vAPI.artAdder.getExhibition) // have we chosen a show?
+  .then(artAdder.getExhibition) // have we chosen a show?
   .then(function (exhibition) {
     // no
     if (!exhibition) {
-      vAPI.artAdder.chooseMostRecentExhibition()
+      artAdder.chooseMostRecentExhibition()
     }
   })
 }
@@ -48,7 +48,7 @@ function syncDefaultList() {
                    return 0
                  })
     if (items.length > 0) {
-      vAPI.artAdder.localSet('defaultShowData', items).then(d.resolve)
+      artAdder.localSet('defaultShowData', items).then(d.resolve)
     }
   })
   return d.promise
