@@ -25,8 +25,8 @@ function init(event) {
     if (!exhibition) {
       vAPI.artAdder.localGet('defaultShowData')
       .then(function (feeds) {
-        var rand = feeds.defaultShowData[Math.floor(feeds.defaultShowData.length * Math.random())].title
-        vAPI.artAdder.exhibition(rand)
+        var latest = feeds.defaultShowData[0].title
+        vAPI.artAdder.exhibition(latest)
       })
     }
   })
@@ -38,6 +38,11 @@ function syncDefaultList() {
   fetchFeed('http://add-art.org/feed/')
   .then(function (items) {
     items = items.filter(function (show) { return show.link !== '' && show.images !== '' })
+                 .sort(function (a,b) {
+                   if (Date.parse(a.date) > Date.parse(b.date)) return -1
+                   if (Date.parse(a.date) < Date.parse(b.date)) return 1
+                   return 0
+                 })
     if (items.length > 0) {
       vAPI.artAdder.localSet('defaultShowData', items).then(d.resolve)
     }

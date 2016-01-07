@@ -55,6 +55,7 @@ header#top {
     background-color: #138acb;
 }
 header#top #addSource {
+  display: none; 
 	background-image: url('images/plus.png');
 	background-repeat: no-repeat;
     background-position: center; 

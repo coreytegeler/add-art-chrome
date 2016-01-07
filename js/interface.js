@@ -36,6 +36,8 @@ function buildInterface(sources) {
     $shows.append($showTemplate.clone());
     $infoPages.append($infoPageTemplate.clone());
 	}
+  $('#shows li.show:last').remove() // sort of a strange way to do this, so we need to remove the last one
+
   $('body').removeClass('loading');
 
 

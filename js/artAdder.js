@@ -4,7 +4,6 @@
 
   /******************************************************************************/
 
-
   function getExt (filename) {
     return filename.match(/\.(.+)$/)[1].toLowerCase()
   }
@@ -171,12 +170,13 @@
     },
     setExhibition : function (exhibition) {
       currentExhibition = Q(exhibition)
-      return this.localSet('exhibition', exhibition)
+      artAdder.localSet('exhibitionUpdated', Date.now())
+      return artAdder.localSet('exhibition', exhibition)
     },
     getExhibition : function () {
       if (currentExhibition) return currentExhibition
       var d = Q.defer()
-      this.localGet('exhibition')
+      artAdder.localGet('exhibition')
       .then(function (exhibition) {
         currentExhibition = Q(exhibition.exhibition)
         d.resolve(exhibition.exhibition)
