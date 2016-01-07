@@ -4,7 +4,15 @@ if (typeof chrome !== 'undefined') {
   });
 
   chrome.runtime.onStartup.addListener(function(event) {
-    init(event);
+    init(event)
+    .then(function (){
+      return vAPI.artAdder.localGet('exhibitionUpdated')
+    })
+    .then(function (d){
+      if (Date.now() - d.exhibitionUpdated > 1000*60*60*24*14) { // fortnight
+        vAPI.artAdder.chooseMostRecentExhibition()
+      }
+    })
   });
 
   chrome.extension.onConnect.addListener(function (port) {
@@ -18,16 +26,12 @@ if (typeof chrome !== 'undefined') {
 }
 
 function init(event) {
-  syncDefaultList()
+  return syncDefaultList()
   .then(vAPI.artAdder.getExhibition) // have we chosen a show?
   .then(function (exhibition) {
     // no
     if (!exhibition) {
-      vAPI.artAdder.localGet('defaultShowData')
-      .then(function (feeds) {
-        var latest = feeds.defaultShowData[0].title
-        vAPI.artAdder.exhibition(latest)
-      })
+      vAPI.artAdder.chooseMostRecentExhibition()
     }
   })
 }

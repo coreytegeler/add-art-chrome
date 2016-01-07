@@ -183,6 +183,13 @@
       })
       return d.promise
     },
+    chooseMostRecentExhibition : function () {
+      artAdder.localGet('defaultShowData')
+      .then(function (feeds) {
+        var latest = feeds.defaultShowData[0].title
+        artAdder.exhibition(latest)
+      })
+    },
     // abstract storage for different browsers
     localSet : function (key, thing) {
       var d = Q.defer()
