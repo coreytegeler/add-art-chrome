@@ -2,7 +2,7 @@
 
 Chrome development of [Steve Lambert][1]'s [Add-Art][2] plugin. Feel free to [fork][3] and contribute.
 
-The extension is currently functional. It uses [this fork][4] of [uBlock][5] under the hood to identify ads. Then we replace them with art.
+The extension is currently functional. ~~It uses [this fork][4] of [uBlock][5] under the hood to identify ads.~~ We identify ads then we replace them with art.
 
 We'd love for you to help with this.
 
