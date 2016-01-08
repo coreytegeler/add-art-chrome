@@ -35,15 +35,6 @@
         "js": ["js/lib/jquery-1.11.2.min.js", "js/lib/q.js", "js/helpers.js", "js/artAdder.js", "js/document_end.js"],
         "run_at": "document_end",
         "all_frames": true 
-    },
-    {
-        "matches": [
-            "https://*.adblockplus.org/*",
-            "https://*.adblockplus.me/*",
-            "https://www.fanboy.co.nz/*"
-        ],
-        "js": ["uBlock/js/subscriber.js"],
-        "run_at": "document_idle"
     }
   ],
   "background": {
