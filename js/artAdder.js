@@ -105,14 +105,32 @@
       })
       return true
     },
+    notify : function (title, body) {
+      chrome.notifications.create(title, {
+        type : "basic",
+        iconUrl : 'images/icon-32.png',
+        title : title,
+        message : body
+      })
+    },
     // download exhibition and store it
     exhibition : function (name) {
-
       var that = this
+      var notify = {
+                      type : "progress",
+                      iconUrl : 'images/icon-32.png',
+                      title : 'Downloading Exhibition...',
+                      message : 'One sec while we fetch "' + name + '"',
+                      progress : 10
+                    }
+      chrome.notifications.create('download', notify)
       this.fetchExhibition(name)
       .then(function (info) {
         zip.workerScriptsPath = '../js/lib/zip/'
         zip.createReader(new zip.HttpReader(info.images), function(reader) {
+
+          notify.progress = 35
+          chrome.notifications.update('download', notify)
 
           // get all entries from the zip
           reader.getEntries(function(entries) {
@@ -141,6 +159,9 @@
                .then(function (entries) {
                  reader.close(); // close the zip reader
 
+                 notify.progress = 65
+                 chrome.notifications.update('download', notify)
+
                  var finalEntries = entries.map(function (entry) {
                    return {
                      i : entry.filename.match(/images\/([0-9]+)/)[1],
@@ -153,6 +174,12 @@
                    info : info,
                    entries : finalEntries
                  }
+                 chrome.notifications.update('download', { 
+                   iconUrl : 'images/icon-32.png',
+                   title : 'Exhibition Downloaded!',
+                   message : 'Enjoy "' + name + '"',
+                   progress : 100 
+                 })
                  that.setExhibition(exhibition)
                })
                .done()
