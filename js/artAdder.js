@@ -4,22 +4,7 @@
 
   /******************************************************************************/
 
-  function getExt (filename) {
-    return filename.match(/\.(.+)$/)[1].toLowerCase()
-  }
 
-  // returns a random image of said dimensions
-  function getImgSrc(imgList, width, height) {
-    var howMany = imgList.map(function (e) { return e.i }).filter(onlyUnique)
-    var rand = ( Math.floor(howMany.length * Math.random()) + 1 ) + ''
-    return imgList.reduce(function (acc, curr, i) {
-      return curr.size === width + 'x' + height && curr.i === rand  ? curr.image : acc
-    }, {})
-  }
-
-  function onlyUnique(value, index, self) { 
-      return self.indexOf(value) === index;
-  }
 
   var currentExhibition;
 
@@ -176,7 +161,6 @@
       }).done()
       return d.promise
     },
-    // download exhibition and store it
     exhibition : function (name) {
       return artAdder.setExhibition(name)
     },
@@ -229,79 +213,13 @@
         chrome.storage.local.get(key, d.resolve)
       }
       return d.promise
-    },
-
-    /*  from original add-art */
-    loadImgArray : function() {
-      this.ImgArray = new Array();
-      // taken from: https://en.wikipedia.org/wiki/Web_banner
-      // 19 images sizes total
-
-      // Rectangles
-      this.ImgArray.push( [ 336, 280 ] ); // Large Rectangle
-      this.ImgArray.push( [ 300, 250 ] ); // Medium Rectangle
-      this.ImgArray.push( [ 180, 150 ] ); // Rectangle
-      this.ImgArray.push( [ 300, 100 ] ); // 3:1 Rectangle
-      this.ImgArray.push( [ 240, 400 ] ); // Vertical Rectangle
-
-      // Squares
-      this.ImgArray.push( [ 250, 250 ] ); // Square Pop-up
-
-      // Banners
-      this.ImgArray.push( [ 720, 300, ] ); // Pop-Under
-      this.ImgArray.push( [ 728, 90, ] ); // Leaderboard
-      this.ImgArray.push( [ 468, 60, ] ); // Full Banner
-      this.ImgArray.push( [ 234, 60, ] ); // Half Banner
-      this.ImgArray.push( [ 120, 240 ] ); // Vertical Banner
-
-      //Buttons
-      this.ImgArray.push( [ 120, 90 ] ); // Button 1
-      this.ImgArray.push( [ 120, 60 ] ); // Button 2
-      this.ImgArray.push( [ 88, 31 ] ); // Micro Bar
-      this.ImgArray.push( [ 88, 15 ] ); // Micro Button
-      this.ImgArray.push( [ 125, 125 ] ); // Square Button
-
-      //Skyscrapers
-      this.ImgArray.push( [ 120, 600 ] ); // Standard Skyscraper
-      this.ImgArray.push( [ 160, 600 ] ); // Wide Skyscraper
-      this.ImgArray.push( [ 300, 600 ] ); // Half-Page
-
-    },
-    askLink : function(width, height) {
-      // Find this.ImgArray with minimal waste (or need - in this case it will be shown in full while mouse over it) of space
-      var optimalbanners = null;
-      var minDiff = Number.POSITIVE_INFINITY;
-      for ( var i = 0; i < this.ImgArray.length; i++) {
-          var diff = Math.abs(width / height - this.ImgArray[i][0] / this.ImgArray[i][1]);
-          if (Math.abs(diff) < Math.abs(minDiff)) {
-              minDiff = diff;
-              optimalbanners = [ i ];
-          } else if (diff == minDiff) {
-              optimalbanners.push(i);
-          }
-      }
-
-      var optimalBanner = [];
-      minDiff = Number.POSITIVE_INFINITY;
-      for (i = 0; i < optimalbanners.length; i++) {
-          var diff = Math.abs(width * height - this.ImgArray[optimalbanners[i]][0] * this.ImgArray[optimalbanners[i]][1]);
-          if (diff < minDiff) {
-              minDiff = diff;
-              optimalBanner = [ optimalbanners[i] ];
-          } else if (diff == minDiff) {
-              optimalBanner.push(optimalbanners[i]);
-          }
-      }
-      return this.ImgArray[optimalBanner[Math.floor(Math.random() * optimalBanner.length)]];
     }
 
   }
 
   
-  artAdder.loadImgArray() // loadImgArray
 
-  if (typeof vAPI !== 'undefined') vAPI.artAdder = artAdder
-  else window.artAdder = artAdder
+  window.artAdder = artAdder
   
 })();
 
