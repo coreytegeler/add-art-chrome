@@ -1,6 +1,3 @@
-if (typeof chrome !== 'undefined') {
-  var port = chrome.extension.connect({ name : 'popup' })
-}
 
 artAdder.localGet('defaultShowData')
 .then(function (object) {
@@ -10,17 +7,11 @@ artAdder.localGet('defaultShowData')
 
 var currentExhibition
 
-var sources = [];
 function insertSources(shows) {
   artAdder.getExhibition()
   .then(function (exhibition) {
     currentExhibition = exhibition
-    for(var i=0; i<shows.length; i++) {
-      sources.push(shows[i]);
-      if(sources.length == shows.length) {
-        buildInterface(sources);
-      }
-    }
+    buildInterface(shows)
   })
 }
 
@@ -51,6 +42,11 @@ function buildInterface(sources) {
 		$('header#top #close').addClass('visible');
 	  	$('#newSource').addClass('opened');
 	});
+	$('body').on('click', '.selectSource', function(){
+    var selectedSource = $(this).attr('data-show');
+    chrome.runtime.sendMessage({ msg : { what : 'exhibition', exhibition : selectedSource }})
+    self.close()
+  });
 
 }
 
@@ -60,7 +56,7 @@ function addModules(show, i) {
 	$square.find('.thumb img').attr('src', show.thumbnail);
   $square.removeClass('active')
 
-  if (currentExhibition && currentExhibition.info.title === show.title) { 
+  if (currentExhibition === show.title) { 
     $square.addClass('active')
   }
 
@@ -79,12 +75,5 @@ function addModules(show, i) {
 
 	$selectBtn = $infoPage.children('.selectSource');
 	$selectBtn.attr('data-show', show.title);
-	$selectBtn.click(event, selectSource);
 }
 
-function selectSource(event) {
-	var selectedSource = $(event.currentTarget).attr('data-show');
-
-  port.postMessage({ msg : { what : 'exhibition', exhibition : selectedSource }})
-  self.close()
-}

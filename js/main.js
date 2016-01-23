@@ -6,22 +6,20 @@ if (typeof chrome !== 'undefined') {
   chrome.runtime.onStartup.addListener(function(event) {
     init(event)
     .then(function (){
-      return vAPI.artAdder.localGet('exhibitionUpdated')
+      return artAdder.localGet('exhibitionUpdated')
     })
     .then(function (d){
       if (Date.now() - d.exhibitionUpdated > 1000*60*60*24*14) { // fortnight
-        vAPI.artAdder.chooseMostRecentExhibition()
+        artAdder.chooseMostRecentExhibition()
       }
     })
   });
 
-  chrome.extension.onConnect.addListener(function (port) {
-    port.onMessage.addListener(function (msg) {
-      var key = msg.msg.what
-      if (artAdder[key] && typeof artAdder[key] === 'function') {
-        artAdder[key](msg.msg[key])
-      }
-    })
+  chrome.runtime.onMessage.addListener(function (msg) {
+    var key = msg.msg.what
+    if (artAdder[key] && typeof artAdder[key] === 'function') {
+      artAdder[key](msg.msg[key])
+    }
   })
 }
 
@@ -39,16 +37,18 @@ function init(event) {
 // set default show list from add-art feed
 function syncDefaultList() {
   var d = Q.defer()
-  fetchFeed('http://add-art.org/feed/')
-  .then(function (items) {
-    items = items.filter(function (show) { return show.link !== '' && show.images !== '' })
-                 .sort(function (a,b) {
-                   if (Date.parse(a.date) > Date.parse(b.date)) return -1
-                   if (Date.parse(a.date) < Date.parse(b.date)) return 1
-                   return 0
-                 })
-    if (items.length > 0) {
-      artAdder.localSet('defaultShowData', items).then(d.resolve)
+  $.ajax({
+    url : 'https://raw.githubusercontent.com/owise1/add-art-exhibitions/master/exhibitions.json',
+    dataType : 'json',
+    success : function (items) {
+      items = items.sort(function (a,b) {
+                     if (Date.parse(a.date) < Date.parse(b.date)) return -1
+                     if (Date.parse(a.date) > Date.parse(b.date)) return 1
+                     return 0
+                   })
+      if (items.length > 0) {
+        artAdder.localSet('defaultShowData', items).then(d.resolve)
+      }
     }
   })
   return d.promise
