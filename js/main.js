@@ -42,8 +42,8 @@ function syncDefaultList() {
     dataType : 'json',
     success : function (items) {
       items = items.sort(function (a,b) {
-                     if (Date.parse(a.date) < Date.parse(b.date)) return -1
-                     if (Date.parse(a.date) > Date.parse(b.date)) return 1
+                     if (a.date > b.date) return -1
+                     if (a.date < b.date) return 1
                      return 0
                    })
       if (items.length > 0) {

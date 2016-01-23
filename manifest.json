@@ -32,7 +32,7 @@
   "content_scripts": [
     {
         "matches": ["http://*/*", "https://*/*"],
-        "js": ["js/lib/jquery-1.11.2.min.js", "js/lib/q.js", "js/helpers.js", "js/artAdder.js", "js/document_end.js"],
+        "js": ["js/lib/jquery-1.11.2.min.js", "js/lib/q.js", "js/lib/ramda.min.js", "js/artAdder.js", "js/document_end.js"],
         "run_at": "document_end",
         "all_frames": true 
     }

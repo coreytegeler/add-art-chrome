@@ -28,7 +28,7 @@
     replacedCount : '',
     processAdNode : function (elem) {
 
-      var goodBye = false
+       var goodBye = false
       if (elem.offsetWidth < 2) goodBye = true 
       if (elem.offsetHeight < 2) goodBye = true 
       if (elem.tagName !== 'IFRAME' 
@@ -42,18 +42,40 @@
       $(elem).data('replaced', true)
       if (goodBye) return
 
-      if (artAdder.replacedCount === '') {
-        artAdder.replacedCount = 1
-      } else {
-        artAdder.replacedCount++
-      }
 
       var that = this
-      artAdder.getExhibition()
+      artAdder.getExhibitionObj()
       .then(function (exhibition) {
+        console.log(exhibition)
         var origW = elem.offsetWidth
         var origH = elem.offsetHeight
-        var bestSize = that.askLink(origW, origH)
+        var piece = exhibition.works[0]
+
+        var $wrap = $('<div>').css({
+          width: origW,
+          height: origH,
+          position : 'relative'
+        })
+        var art  = document.createElement('a')
+        art.href = piece.link || exhibition.link || 'http://add-art.org' 
+        art.title = piece.title || exhibition.title + ' | replaced by Add-Art'
+        art.style.width = origW + 'px'
+        art.style.height = origH + 'px'
+        art.style.display = 'block'
+        art.style.position = 'absolute'
+        art.style.background = "url(" + piece.image + ")"
+        art.style.backgroundSize = "cover"
+        art.style.backgroundPosition = "left " + ['top', 'bottom', 'center'][( Math.floor(Math.random() * 3) )]
+        art.style.backgroundRepeat = "no-repeat"
+
+        $wrap.append(art)
+        $(elem.parentElement).append($wrap)
+        $(elem).remove()
+      })
+
+
+
+    /*
 
         var $wrap = $('<div>').css({
           width: origW,
@@ -103,6 +125,7 @@
         }, 50)
 
       })
+      */
       return true
     },
     notify : function (title, body) {
@@ -131,6 +154,17 @@
         d.resolve(exhibition.exhibition)
       })
       return d.promise
+    },
+    getExhibitionObj : function (){
+      var exhibitions
+      return artAdder.localGet('defaultShowData')
+      .then(function (data){
+        exhibitions = data.defaultShowData
+        return artAdder.getExhibition()
+      })
+      .then(function (title){
+        return R.find(R.propEq('title', title), exhibitions)
+      })
     },
     chooseMostRecentExhibition : function () {
       artAdder.localGet('defaultShowData')
