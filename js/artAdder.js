@@ -24,6 +24,16 @@
   var currentExhibition;
 
 
+  function getParentUrl() {
+    var isInIframe = (parent !== window),
+        parentUrl = window.location.href;
+
+    if (isInIframe) {
+        parentUrl = document.referrer;
+    }
+    return parentUrl;
+  }
+
   var artAdder = {
     replacedCount : '',
     processAdNode : function (elem) {
@@ -43,13 +53,17 @@
       if (goodBye) return
 
 
-      var that = this
+      var that = this,exhibition
+
       artAdder.getExhibitionObj()
-      .then(function (exhibition) {
-        console.log(exhibition)
+      .then(function (ex) {
+        exhibition = ex
+        return artAdder.getPieceI()
+      })
+      .then(function (pieceI) {
         var origW = elem.offsetWidth
         var origH = elem.offsetHeight
-        var piece = exhibition.works[0]
+        var piece = exhibition.works[pieceI]
 
         var $wrap = $('<div>').css({
           width: origW,
@@ -128,13 +142,39 @@
       */
       return true
     },
-    notify : function (title, body) {
-      chrome.notifications.create(title, {
-        type : "basic",
-        iconUrl : 'images/icon-32.png',
-        title : title,
-        message : body
+    getPieceI : function (){
+      var topUrl = getParentUrl(),savedUrl,savedPieceI
+      var d = Q.defer()
+      artAdder.localGet('url')
+      .then(function (url){
+        savedUrl = url && url.url
+        return artAdder.localGet('pieceI')
       })
+      .then(function (pieceI) {
+        savedPieceI = pieceI && pieceI.pieceI
+        return artAdder.getExhibitionObj()
+      })
+      .then(function (ex){
+        var pieceI = savedPieceI || 0
+        if (!savedUrl) artAdder.localSet('url', topUrl)
+        if (savedUrl === topUrl) return d.resolve(pieceI)
+
+        // there's no pieceI - choose 0 
+        if (!savedPieceI && savedPieceI !== 0) {
+          artAdder.localSet('pieceI', pieceI)
+          return d.resolve(pieceI)
+        }
+
+       // a new url
+       pieceI++
+       if (pieceI > ex.works.length - 1) {
+         pieceI = 0
+       }
+       artAdder.localSet('url', topUrl)
+       artAdder.localSet('pieceI', pieceI)
+       return d.resolve(pieceI)
+      }).done()
+      return d.promise
     },
     // download exhibition and store it
     exhibition : function (name) {
