@@ -6,10 +6,10 @@ if (typeof chrome !== 'undefined') {
   chrome.runtime.onStartup.addListener(function(event) {
     init(event)
     .then(function (){
-      return artAdder.localGet('exhibitionUpdated')
+      return artAdder.localGet('disableAutoUpdate')
     })
-    .then(function (d){
-      if (Date.now() - d.exhibitionUpdated > 1000*60*60*24*14) { // fortnight
+    .then(function (res){
+      if (!res.disableAutoUpdate) {
         artAdder.chooseMostRecentExhibition()
       }
     })

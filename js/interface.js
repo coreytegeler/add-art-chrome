@@ -15,6 +15,19 @@ function insertSources(shows) {
   })
 }
 
+$(function (){
+  artAdder.localGet('disableAutoUpdate')
+  .then(function (res){
+    var disableAutoUpdate = res.disableAutoUpdate || false
+      console.log(disableAutoUpdate)
+    $('input[name=autoUpdate]').attr('checked', !disableAutoUpdate)
+  })
+    
+  $('body').on('click', 'input[name=autoUpdate]', function (){
+    artAdder.localSet('disableAutoUpdate', !$(this).is(':checked'))
+  })
+})
+
 function buildInterface(sources) {
 	$shows = $('ul#shows');
 	$showTemplate = $('ul#shows li.show');
@@ -63,7 +76,7 @@ function addModules(show, i) {
 	$square.click(function() {
 		var title = $(this).attr('data-title');
 		$('header#top #close').addClass('visible');
-		$('.infoPage[data-title="' + title + '"').addClass('opened');
+		$('.infoPage[data-title="' + title + '"]').addClass('opened');
 	});
 
 	var $infoPage = $('.infoPage').eq(i);

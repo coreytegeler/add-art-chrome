@@ -255,3 +255,8 @@ header#top #close.visible {
 	float: left;
 	border: 4px solid white;
 }
+.autoUpdate{
+  padding: 10px;
+  clear: both;
+  text-align: center; 
+}
