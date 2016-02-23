@@ -24,8 +24,8 @@
     processAdNode : function (elem) {
 
        var goodBye = false
-      if (elem.offsetWidth < 2) goodBye = true 
-      if (elem.offsetHeight < 2) goodBye = true 
+      //if (elem.offsetWidth < 2) goodBye = true 
+      //if (elem.offsetHeight < 2) goodBye = true 
       if (elem.tagName !== 'IFRAME' 
           && elem.tagName !== 'IMG'
           && elem.tagName !== 'OBJECT'
