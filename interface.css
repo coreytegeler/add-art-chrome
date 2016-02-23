@@ -48,11 +48,11 @@ header#top {
 	top: 0;
 	left: 0;
 	z-index: 10;
-	background-image: url('images/logo.png');
+	background-image: url('images/logo.svg');
 	background-repeat: no-repeat;
-    background-position: center; 
-    background-size: auto 30px; 
-    background-color: #138acb;
+  background-position: center; 
+  background-size: 100% 100%; 
+  background-color: #ED1C24;
 }
 header#top #addSource {
   display: none; 
