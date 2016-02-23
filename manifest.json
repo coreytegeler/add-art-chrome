@@ -1,10 +1,10 @@
 {
-  "manifest_version": 2,
-  "name": "Add-Art",
+  "manifest_version": 3,
+  "name": "Addendum",
   "description": "Replacing ads with art.",
   "author" : "Corey Tegeler,@owise1",
-  "version": "0.3",
-  "homepage_url" : "http://add-art.org/",
+  "version": "0.4",
+  "homepage_url" : "http://addendum.kadist.org/",
   "icons": {
     "16": "images/icon-16.png",
     "32": "images/icon-32.png",
@@ -14,7 +14,7 @@
   "browser_action": {
     "default_icon": "images/icon-64.png",
     "default_popup": "interface.html",
-    "default_title": "Add art!"
+    "default_title": "Addendum!"
   },
 
   "permissions": [
@@ -34,6 +34,12 @@
         "js": ["js/lib/jquery-1.11.2.min.js", "js/lib/q.js", "js/lib/ramda.min.js", "js/artAdder.js", "js/document_end.js"],
         "run_at": "document_end",
         "all_frames": true 
+    },
+    {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["js/lib/jquery-1.11.2.min.js", "js/lib/q.js", "js/lib/ramda.min.js", "js/artAdder.js", "js/document_start.js"],
+        "run_at": "document_start",
+        "all_frames": false 
     }
   ],
   "background": {

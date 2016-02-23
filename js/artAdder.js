@@ -56,8 +56,8 @@
           position : 'relative'
         })
         var art  = document.createElement('a')
-        art.href = piece.link || exhibition.link || 'http://add-art.org' 
-        art.title = piece.title || exhibition.title + ' | replaced by Add-Art'
+        art.href = piece.link || exhibition.link || 'http://addendum.kadist.org' 
+        art.title = piece.title || exhibition.title + ' | replaced by Addendum'
         art.style.width = origW + 'px'
         art.style.height = origH + 'px'
         art.style.display = 'block'

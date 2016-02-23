@@ -1,6 +1,6 @@
 ![REPLACED!](images/cover.gif)
 
-Chrome development of [Steve Lambert][1]'s [Add-Art][2] plugin. Feel free to [fork][3] and contribute.
+Chrome development of [Addendum](http://addendum.kadist.org) inspired by [Steve Lambert][1]'s [Add-Art][2] plugin. Feel free to [fork][3] and contribute.
 
 The extension is currently functional and on the Chrome Store [here](https://chrome.google.com/webstore/detail/add-art/jplogjalofjlkendelkacpekloflkfeg). ~~It uses [this fork][4] of [uBlock][5] under the hood to identify ads.~~ We identify ads then we replace them with art.
 
@@ -14,5 +14,3 @@ We'd love for you to help with this.
 [1]: http://visitsteve.com
 [2]: http://github.com/slambert/add-art
 [3]: https://github.com/coreytegeler/Add-Art-chrome/fork
-[4]: https://github.com/owise1/uBlock 
-[5]: https://www.ublock.org/ 
