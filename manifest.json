@@ -1,10 +1,10 @@
 {
   "manifest_version": 2,
-  "name": "Addendum",
+  "name": "Add Art",
   "description": "Replacing ads with art.",
-  "author" : "Corey Tegeler,@owise1",
-  "version": "0.4",
-  "homepage_url" : "http://addendum.kadist.org/",
+  "author" : "@owise1,Corey Tegeler",
+  "version": "0.6",
+  "homepage_url" : "http://add-art.org/",
   "icons": {
     "16": "images/icon-16.png",
     "32": "images/icon-32.png",
@@ -14,7 +14,7 @@
   "browser_action": {
     "default_icon": "images/icon-64.png",
     "default_popup": "interface.html",
-    "default_title": "Addendum!"
+    "default_title": "Add Art!"
   },
 
   "permissions": [

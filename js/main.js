@@ -41,11 +41,7 @@ function syncDefaultList() {
     url : 'https://raw.githubusercontent.com/owise1/add-art-exhibitions/master/exhibitions.json',
     dataType : 'json',
     success : function (items) {
-      items = items.sort(function (a,b) {
-                     if (a.date > b.date) return -1
-                     if (a.date < b.date) return 1
-                     return 0
-                   })
+      items = items.sort(artAdder.exhibitionsSort)
       if (items.length > 0) {
         artAdder.localSet('defaultShowData', items).then(d.resolve)
       }

@@ -181,9 +181,9 @@
     },
     getExhibitionObj : function (){
       var exhibitions
-      return artAdder.localGet('defaultShowData')
-      .then(function (data){
-        exhibitions = data.defaultShowData
+      return artAdder.getAllExhibitions()
+      .then(function (all){
+        exhibitions = all 
         return artAdder.getExhibition()
       })
       .then(function (title){
@@ -195,6 +195,38 @@
       .then(function (feeds) {
         var latest = feeds.defaultShowData[0].title
         artAdder.exhibition(latest)
+      })
+    },
+    getCustomExhibitions : function (){
+      var d = Q.defer()
+      artAdder.localGet('customExhibitions')
+      .then( function (obj){
+        var customExhibitions = obj['customExhibitions'] || []
+        d.resolve(customExhibitions.filter(function (e){ return e  })) // get rid of blanks 
+      })
+      return d.promise
+
+    },
+    getAllExhibitions : function () {
+      var d = Q.defer()
+      var exhibs = []
+      artAdder.localGet('defaultShowData')
+      .then(function (obj){
+        exhibs = R.map(artAdder.addPropToObj('addendum', true), exhibs.concat(obj.defaultShowData))
+        return artAdder.getCustomExhibitions()
+      })
+      .then(function (customExhibitions){
+        d.resolve(exhibs.concat(customExhibitions).sort(artAdder.exhibitionsSort)) 
+      })
+      .done()
+      return d.promise
+    },
+    addExhibition : function (customExhibition){
+      return artAdder.getCustomExhibitions()
+      .then( function (customExhibitions){
+        customExhibitions.push(customExhibition)
+        customExhibitions = R.uniq(customExhibitions)
+        return artAdder.localSet('customExhibitions', customExhibitions)
       })
     },
     // abstract storage for different browsers
@@ -213,7 +245,27 @@
         chrome.storage.local.get(key, d.resolve)
       }
       return d.promise
-    }
+    },
+    formatDate : function (t){
+      var d = new Date(t)
+      return (d.getMonth()+1) + '/' + d.getDate() + '/' + d.getFullYear()
+    },
+    verifyExhibition : function (exhib){
+      return ['artist','description','title','thumbnail','works'].reduce(function (prev, curr){
+        if (!prev) return prev 
+        return exhib[curr] !== undefined
+      }, true)
+    },
+    exhibitionsSort : function (a,b) {
+      if (a.date > b.date) return -1
+      if (a.date < b.date) return 1
+      return 0
+    },
+    addPropToObj : R.curry(function (prop, fn){
+      return function (obj) {
+        return R.set(R.lensProp(prop), typeof fn === 'function' ? fn(obj) : fn, R.clone(obj))
+      }
+    })
 
   }
 
