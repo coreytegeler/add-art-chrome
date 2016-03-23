@@ -217,6 +217,8 @@ header#top #close.visible {
 .infoPage .description {
 	font-size: 14px;
 	line-height: 19px;
+  white-space: pre-wrap;
+  padding-top: 10px;
 }
 .infoPage .description img {
 	padding: 10px 0;

@@ -247,8 +247,13 @@
       return d.promise
     },
     formatDate : function (t){
-      var d = new Date(t)
-      return (d.getMonth()+1) + '/' + d.getDate() + '/' + d.getFullYear()
+      var dateObj = new Date(t)
+      var months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+      var day = dateObj.getDate()
+      var month = months[dateObj.getMonth()]
+      var year = dateObj.getUTCFullYear()
+      var date = month + ' ' + day + ', ' + year
+      return date
     },
     verifyExhibition : function (exhib){
       return ['artist','description','title','thumbnail','works'].reduce(function (prev, curr){
