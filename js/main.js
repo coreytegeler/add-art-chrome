@@ -27,9 +27,12 @@ function init(event) {
   return syncDefaultList()
   .then(artAdder.getExhibition) // have we chosen a show?
   .then(function (exhibition) {
-    // no
+    // no, this is the first time
     if (!exhibition) {
       artAdder.chooseMostRecentExhibition()
+      chrome.tabs.create({
+        url : 'http://add-art.org/update'
+      })
     }
   })
 }
