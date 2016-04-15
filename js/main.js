@@ -24,6 +24,7 @@ if (typeof chrome !== 'undefined') {
 }
 
 function init(event) {
+  artAdder.fetchSelectorList()
   return syncDefaultList()
   .then(artAdder.getExhibition) // have we chosen a show?
   .then(function (exhibition) {

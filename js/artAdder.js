@@ -57,12 +57,14 @@
           position : 'relative'
         })
         var art  = document.createElement('a')
-        art.href = piece.link || exhibition.link || 'http://addendum.kadist.org' 
+        art.href = piece.link || exhibition.link || 'http://addendum.kadist.org'
         art.title = piece.title || exhibition.title + ' | replaced by Addendum'
+        art.target = '_blank'
         art.style.width = origW + 'px'
         art.style.height = origH + 'px'
         art.style.display = 'block'
         art.style.position = 'absolute'
+        art.style.zIndex = 100
         art.style.background = "url(" + piece.image + ")"
         art.style.backgroundSize = "cover"
         art.style.backgroundPosition = "left " + ['top', 'bottom', 'center'][( Math.floor(Math.random() * 3) )]
@@ -247,8 +249,31 @@
       }
       return d.promise
     },
+    fetchSelectorList : function () {
+      $.ajax({
+        url : 'https://easylist-downloads.adblockplus.org/easylist.txt',
+        type : 'get',
+        success : function (txt){
+          var selectors = txt.split("\n")
+                .reverse()
+                .filter(function name(line) {
+                  return /^##/.test(line)
+                })
+                .map(function (line) {
+                  return line.replace(/^##/, '')
+                })
+          artAdder.localSet('selectors', selectors)
+        }
+      })
+    },
+    getSelectors : function () {
+      return artAdder.localGet('selectors')
+      .then(function (obj) {
+        return obj.selectors
+      })
+    },
     formatDate : function (t){
-      var dateObj = new Date(t)
+      var dateObj = new Date(parseInt(t))
       var months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
       var day = dateObj.getDate()
       var month = months[dateObj.getMonth()]

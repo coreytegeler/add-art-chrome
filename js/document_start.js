@@ -1,6 +1,6 @@
 $(function (){
   var MAX_WIDTH = 728
-  var MAX_HEIGHT = 600 
+  var MAX_HEIGHT = 600
 
   function checkElem ($elem) {
     if ($elem.innerWidth() > 50 && $elem.innerHeight() > 50) {
@@ -15,7 +15,7 @@ $(function (){
     return findFirstWithDims(par)
   }
 
-  // catch simple google ads 
+  // catch simple google ads
   $('script[src*=googlesyndication]').each(function (){
     // try to find dimensions
     var w, h
