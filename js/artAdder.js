@@ -26,14 +26,15 @@
        var goodBye = false
       //if (elem.offsetWidth < 2) goodBye = true 
       //if (elem.offsetHeight < 2) goodBye = true 
-      if (elem.tagName !== 'IFRAME' 
+      if (elem.tagName !== 'IFRAME'
           && elem.tagName !== 'IMG'
+          && elem.tagName !== 'DIV'
           && elem.tagName !== 'OBJECT'
           && elem.tagName !== 'A'
           && elem.tagName !== 'INS'
-          ) goodBye = true 
+          ) goodBye = true
 
-      if ($(elem).data('replaced')) goodBye = true 
+      if ($(elem).data('replaced')) goodBye = true
       $(elem).data('replaced', true)
       if (goodBye) return
 
