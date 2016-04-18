@@ -1,3 +1,11 @@
+/**
+ * NOT CURRENTLY IN USE.
+ *
+ * This was originally intended to
+ * find ads when the user had an ad-blocker enabled.
+ * since the switch to Ad Block Plus's ad selector list
+ * this no longer works
+ */
 $(function (){
   var MAX_WIDTH = 728
   var MAX_HEIGHT = 600

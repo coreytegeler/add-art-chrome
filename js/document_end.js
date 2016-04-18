@@ -4,16 +4,7 @@ jQuery(function ($){
   artAdder.getSelectors()
   .then(function name(selectors){
     ;(function checkIFrames() {
-      // var selectors = [
-      //   'iframe[id^=google_ads]',
-      //   'div[id^=google_ads]',
-      //   'iframe[src*=serving-sys]',
-      //   'ins.adsbygoogle',
-      //   'ins.addendum',
-      //   'ins[id^=aswift]',
-      //   'img[src*=decknetwork]'
-      // ]
-      $(selectors.join(',')).each(function (){
+      var found = $(selectors.join(',')).each(function (){
         artAdder.processAdNode(this)
       })
       if (++tried < howMany) {
