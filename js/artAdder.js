@@ -186,7 +186,7 @@
       var exhibitions
       return artAdder.getAllExhibitions()
       .then(function (all){
-        exhibitions = all 
+        exhibitions = all
         return artAdder.getExhibition()
       })
       .then(function (title){
@@ -208,7 +208,6 @@
         d.resolve(customExhibitions.filter(function (e){ return e  })) // get rid of blanks 
       })
       return d.promise
-
     },
     getAllExhibitions : function () {
       var d = Q.defer()
