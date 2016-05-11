@@ -19,13 +19,19 @@
     return parentUrl;
   }
 
+  function pieceLink (piece) {
+    if (!piece.link) return false
+    if ($.isArray(piece.link)) return piece.link[Math.floor(Math.random() * piece.link.length)]
+    return piece.link
+  }
+
   var artAdder = {
     replacedCount : '',
     processAdNode : function (elem) {
 
        var goodBye = false
-      //if (elem.offsetWidth < 2) goodBye = true 
-      //if (elem.offsetHeight < 2) goodBye = true 
+      //if (elem.offsetWidth < 2) goodBye = true
+      //if (elem.offsetHeight < 2) goodBye = true
       if (elem.tagName !== 'IFRAME'
           && elem.tagName !== 'IMG'
           && elem.tagName !== 'DIV'
@@ -57,7 +63,7 @@
           position : 'relative'
         })
         var art  = document.createElement('a')
-        art.href = piece.link || exhibition.link || 'http://addendum.kadist.org'
+        art.href = pieceLink(piece) || exhibition.link || 'http://addendum.kadist.org'
         art.title = piece.title || exhibition.title + ' | replaced by Addendum'
         art.target = '_blank'
         art.style.width = origW + 'px'
@@ -282,7 +288,7 @@
     },
     verifyExhibition : function (exhib){
       return ['artist','description','title','thumbnail','works'].reduce(function (prev, curr){
-        if (!prev) return prev 
+        if (!prev) return prev
         return exhib[curr] !== undefined
       }, true)
     },
@@ -299,10 +305,7 @@
 
   }
 
-  
-
   window.artAdder = artAdder
-  
 })();
 
 

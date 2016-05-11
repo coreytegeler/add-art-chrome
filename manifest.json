@@ -3,7 +3,7 @@
   "name": "Add Art",
   "description": "Replacing ads with art.",
   "author" : "@owise1,Corey Tegeler",
-  "version": "2.2.7",
+  "version": "2.2.8",
   "homepage_url" : "http://add-art.org/",
   "icons": {
     "16": "images/icon-16.png",
