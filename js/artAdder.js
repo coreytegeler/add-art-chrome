@@ -44,6 +44,7 @@
       $(elem).data('replaced', true)
       if (goodBye) return
 
+      console.log(elem);
 
       var that = this,exhibition
 
@@ -259,15 +260,24 @@
         url : 'https://easylist-downloads.adblockplus.org/easylist.txt',
         type : 'get',
         success : function (txt){
-          var selectors = txt.split("\n")
-                .reverse()
-                .filter(function name(line) {
+          var txtArr = txt.split("\n").reverse() 
+          var selectors = txtArr 
+                .filter(function (line) {
                   return /^##/.test(line)
                 })
                 .map(function (line) {
                   return line.replace(/^##/, '')
                 })
-          artAdder.localSet('selectors', selectors)
+
+          var whitelist = txtArr
+                .filter(function (line){
+                  return /^[a-z0-9]/.test(line) && !/##/.test(line)
+                })
+                .map(R.split('#@#'))
+          artAdder.localSet('selectors', {
+            selectors : selectors,
+            whitelist : whitelist
+          })
         }
       })
     },
