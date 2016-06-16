@@ -44,8 +44,6 @@
       $(elem).data('replaced', true)
       if (goodBye) return
 
-      console.log(elem);
-
       var that = this,exhibition
 
       artAdder.getExhibitionObj()
@@ -61,7 +59,7 @@
         var $wrap = $('<div>').css({
           width: origW,
           height: origH,
-          position : 'relative'
+          position : $(elem).css('position') || 'relative'
         })
         var art  = document.createElement('a')
         art.href = pieceLink(piece) || exhibition.link || 'http://addendum.kadist.org'
