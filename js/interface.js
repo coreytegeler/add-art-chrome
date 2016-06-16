@@ -1,4 +1,4 @@
-var currentExhibition, allExhibitions
+var currentExhibition, allExhibitions, addendumCount
 
 artAdder.getAllExhibitions()
 .then(function (shows) {
@@ -16,7 +16,6 @@ $(function (){
   artAdder.localGet('disableAutoUpdate')
   .then(function (res){
     var disableAutoUpdate = res.disableAutoUpdate || false
-      console.log(disableAutoUpdate)
     $('input[name=autoUpdate]').attr('checked', !disableAutoUpdate)
   })
 
@@ -31,6 +30,7 @@ function buildInterface(sources) {
 	$infoPages = $('#infoPages');
 	$infoPageTemplate = $('#infoPages .infoPage');
   $('body').addClass('loading')
+  addendumCount = sources.filter(R.prop('addendum')).length
 
 	for(var i = 0; i < sources.length; i++) {
 		addModules(sources[i],i);
@@ -85,7 +85,7 @@ function buildInterface(sources) {
 
 }
 
-var addendumI = 1
+var addendumI = 0
 function addModules(show, i) {
 	var $square = $('ul#shows li.show').eq(i);
   var description = show.description
@@ -99,7 +99,8 @@ function addModules(show, i) {
   }
   if (show.addendum) {
     $square.addClass('addendum')
-    $square.find('.thumb .short-title').text('Addendum #' + addendumI++);
+    $square.find('.thumb .short-title').text('Addendum #' + (addendumCount  - addendumI));
+    addendumI++
   } else if (show.url) {
     description += "\n\nEssay URL:\n" + show.url
   }
