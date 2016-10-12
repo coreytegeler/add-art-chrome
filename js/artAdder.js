@@ -60,7 +60,7 @@
           width: origW,
           height: origH,
           position : $(elem).css('position') || 'relative'
-        })
+        }).attr('class', elem.className).attr('id', elem.id)
         var art  = document.createElement('a')
         art.href = pieceLink(piece) || exhibition.link || 'http://addendum.kadist.org'
         art.title = piece.title || exhibition.title + ' | replaced by Addendum'
@@ -236,6 +236,39 @@
         return artAdder.localSet('customExhibitions', customExhibitions)
       })
     },
+    getCurrentHost : function (){
+      var d = Q.defer()
+      chrome.tabs.query({ active : true }, function (tab){
+        var host = R.pipe(
+          R.nth(0),
+          R.prop('url'),
+          R.replace(/https?:\/\//, ''),
+          R.split('/'),
+          R.nth(0),
+          R.replace(/www\./, '')
+        )(tab)
+        d.resolve(host)
+      })
+      return d.promise
+    },
+    getBlockedSites : function (){
+      return artAdder.localGet('blockedSites')
+        .then(function (obj){
+          return obj.blockedSites || []
+        })
+    },
+    toggleSiteBlock : function (host){
+      return artAdder.getBlockedSites()
+      .then(function (blockedSites){
+        if (R.contains(host, blockedSites)) {
+          blockedSites = R.filter(R.pipe(R.equals(host),R.not), blockedSites)
+          
+        } else {
+          blockedSites.push(host)
+        }
+        return artAdder.localSet('blockedSites', blockedSites)
+      })
+    },
     // abstract storage for different browsers
     localSet : function (key, thing) {
       var d = Q.defer()
@@ -280,9 +313,15 @@
       })
     },
     getSelectors : function () {
+      var response
       return artAdder.localGet('selectors')
       .then(function (obj) {
-        return obj.selectors
+        response = obj.selectors
+        return artAdder.getBlockedSites()
+      })
+      .then(function (blockedSites){
+        response.blockedSites = blockedSites
+        return response
       })
     },
     formatDate : function (t){

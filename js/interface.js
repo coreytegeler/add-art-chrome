@@ -11,17 +11,42 @@ artAdder.getAllExhibitions()
   buildInterface(allExhibitions)
 }).done()
 
+function checkCheck(){
+  var host
+  return artAdder.getCurrentHost()
+  .then(function (h){
+    host = h
+    return artAdder.getBlockedSites()
+  })
+  .then(function (blockedSites){
+    var blocked = R.contains(host, blockedSites)
+    if (blocked) {
+      $('#check').addClass('off').attr('title', 'Click to enable add-art on ' + host)
+    } else {
+      $('#check').removeClass('off').attr('title', 'Click to disable add-art on ' + host)
+    }
+    return blocked
+  })
+}
 
 $(function (){
+  checkCheck()
+
   artAdder.localGet('disableAutoUpdate')
   .then(function (res){
     var disableAutoUpdate = res.disableAutoUpdate || false
     $('input[name=autoUpdate]').attr('checked', !disableAutoUpdate)
   })
 
-  $('body').on('click', 'input[name=autoUpdate]', function (){
-    artAdder.localSet('disableAutoUpdate', !$(this).is(':checked'))
-  })
+  $('body')
+    .on('click', 'input[name=autoUpdate]', function (){
+      artAdder.localSet('disableAutoUpdate', !$(this).is(':checked'))
+    })
+    .on('click', '#check', function (){
+      artAdder.getCurrentHost()
+      .then(artAdder.toggleSiteBlock)
+      .then(checkCheck)
+    })
 })
 
 function buildInterface(sources) {

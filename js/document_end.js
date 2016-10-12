@@ -7,8 +7,11 @@ jQuery(function ($){
     var host = R.path(['location', 'host'],parent)
     var skips = []
     if (host) {
+      host = host.replace('www.', '') 
+      if (obj.blockedSites.indexOf(host) > -1) return // this site is blocked
+
       skips = obj.whitelist
-        .filter(R.pipe(R.nth(0), R.split(','), R.contains(host.replace('www.', ''))))
+        .filter(R.pipe(R.nth(0), R.split(','), R.contains(host)))
         .map(R.nth(1))
     }
     ;(function checkIFrames() {

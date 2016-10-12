@@ -44,6 +44,19 @@ body.loading {
 body.loading img{
   display: none; 
 }
+#check{
+    display: block;
+    height: 60px;
+    width: 60px;
+    top: 0;
+    right: 0;
+    background: url(images/on.svg) center center no-repeat;
+    position: absolute;
+    background-size: 35px;
+}
+#check.off{
+    background-image: url(images/off.svg);
+}
 header#top {
 	width: 100%;
 	height: 60px;
@@ -72,6 +85,7 @@ header#top #addSource {
 }
 header#top #close {
 	background-image: url('images/close.png');
+  background-color: #ED1C24;
 	background-repeat: no-repeat;
     background-position: center; 
     background-size: 20px;
