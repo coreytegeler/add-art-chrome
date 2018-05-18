@@ -254,7 +254,9 @@
     getBlockedSites : function (){
       return artAdder.localGet('blockedSites')
         .then(function (obj){
-          return obj.blockedSites || []
+          var blockedSites = obj.blockedSites || []
+          blockedSites.push('google.com')
+          return blockedSites
         })
     },
     toggleSiteBlock : function (host){
